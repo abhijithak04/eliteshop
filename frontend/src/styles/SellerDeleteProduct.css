@@ -1,0 +1,668 @@
+/* ======================================================
+   ELITESHOP SELLER DELETE PRODUCT PAGE
+   File: frontend/src/styles/SellerDeleteProduct.css
+====================================================== */
+
+.elite-delete-product-page {
+  min-height: 100vh;
+  padding: 1.5rem 0 3.5rem;
+  background:
+    radial-gradient(circle at top left, rgba(220, 38, 38, 0.1), transparent 28%),
+    radial-gradient(circle at top right, rgba(37, 99, 235, 0.1), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(250, 204, 21, 0.12), transparent 25%),
+    linear-gradient(180deg, #fff7ed, #f8fafc 42%, #ffffff);
+}
+
+/* HERO */
+
+.elite-delete-hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 34px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at top right, rgba(250, 204, 21, 0.24), transparent 28%),
+    radial-gradient(circle at bottom left, rgba(239, 68, 68, 0.32), transparent 30%),
+    linear-gradient(135deg, #020617, #7f1d1d 42%, #dc2626);
+  box-shadow: 0 28px 75px rgba(220, 38, 38, 0.25);
+  display: flex;
+  justify-content: space-between;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.elite-delete-hero::before {
+  content: "";
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  right: -130px;
+  top: -130px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.elite-delete-hero::after {
+  content: "";
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  left: -90px;
+  bottom: -100px;
+  border-radius: 50%;
+  background: rgba(250, 204, 21, 0.13);
+}
+
+.elite-delete-hero > * {
+  position: relative;
+  z-index: 2;
+}
+
+.elite-delete-hero-badge {
+  border-radius: 999px;
+  padding: 0.65rem 1rem;
+  font-weight: 950;
+}
+
+.elite-delete-hero h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 950;
+  margin: 0.9rem 0 0.35rem;
+  letter-spacing: -0.05em;
+}
+
+.elite-delete-hero p {
+  max-width: 780px;
+  color: rgba(255, 255, 255, 0.84);
+  margin-bottom: 0;
+  font-weight: 650;
+}
+
+.elite-delete-hero-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.elite-delete-hero-actions .btn {
+  min-height: 46px;
+  border-radius: 999px;
+  font-weight: 950;
+}
+
+.elite-delete-floating {
+  position: absolute;
+  right: 2rem;
+  bottom: 1rem;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
+  color: #111827;
+  background: linear-gradient(135deg, #facc15, #fb923c);
+  font-weight: 950;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.22);
+}
+
+/* WARNING */
+
+.elite-delete-warning {
+  border: 0;
+  border-radius: 26px;
+  padding: 1.2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  font-weight: 750;
+  box-shadow: 0 18px 45px rgba(220, 38, 38, 0.12);
+}
+
+.elite-delete-warning svg {
+  flex: 0 0 auto;
+  font-size: 2rem;
+}
+
+.elite-delete-warning h5 {
+  font-weight: 950;
+}
+
+.elite-delete-warning p {
+  margin-bottom: 0;
+}
+
+/* STATS */
+
+.elite-delete-stat-card {
+  border: 0;
+  border-radius: 28px;
+  color: #ffffff;
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.14);
+  transition: all 0.22s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.elite-delete-stat-card::before {
+  content: "";
+  position: absolute;
+  width: 145px;
+  height: 145px;
+  right: -55px;
+  top: -55px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.elite-delete-stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 78px rgba(15, 23, 42, 0.19);
+}
+
+.elite-delete-stat-card .card-body {
+  min-height: 145px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.elite-delete-stat-card span {
+  display: block;
+  font-weight: 850;
+  opacity: 0.88;
+}
+
+.elite-delete-stat-card h2 {
+  font-size: 1.65rem;
+  font-weight: 950;
+  margin: 0.25rem 0;
+}
+
+.elite-delete-stat-card p {
+  margin-bottom: 0;
+  opacity: 0.78;
+  font-weight: 700;
+}
+
+.elite-delete-stat-card svg {
+  font-size: 2.65rem;
+  opacity: 0.92;
+}
+
+.elite-delete-stat-card.price {
+  background: linear-gradient(135deg, #111827, #2563eb);
+}
+
+.elite-delete-stat-card.stock {
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+}
+
+.elite-delete-stat-card.views {
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+}
+
+.elite-delete-stat-card.sold {
+  background: linear-gradient(135deg, #dc2626, #991b1b);
+}
+
+/* RISK */
+
+.elite-delete-risk-card,
+.elite-delete-recommend-card,
+.elite-delete-product-card,
+.elite-delete-gallery-card,
+.elite-delete-confirm-card,
+.elite-delete-safe-card {
+  border: 0;
+  border-radius: 30px;
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.1);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(14px);
+}
+
+.elite-delete-risk-card .card-body,
+.elite-delete-recommend-card .card-body,
+.elite-delete-product-card .card-body,
+.elite-delete-gallery-card .card-body,
+.elite-delete-confirm-card .card-body,
+.elite-delete-safe-card .card-body {
+  padding: 1.45rem;
+}
+
+.elite-delete-risk-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.elite-delete-risk-head h4 {
+  color: #111827;
+  font-weight: 950;
+  margin-bottom: 0.25rem;
+}
+
+.elite-delete-risk-head p {
+  color: #64748b;
+  font-weight: 650;
+  margin-bottom: 0;
+}
+
+.elite-delete-risk-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.85rem;
+}
+
+.elite-delete-risk-grid div {
+  min-height: 112px;
+  padding: 1rem;
+  border-radius: 22px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  display: grid;
+  align-content: center;
+  text-align: center;
+}
+
+.elite-delete-risk-grid svg {
+  margin: 0 auto 0.45rem;
+  color: #dc2626;
+  font-size: 1.35rem;
+}
+
+.elite-delete-risk-grid strong {
+  color: #111827;
+  font-weight: 950;
+}
+
+.elite-delete-risk-grid span {
+  color: #64748b;
+  font-weight: 800;
+  font-size: 0.8rem;
+}
+
+.elite-delete-recommend-card {
+  height: 100%;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at top right, rgba(250, 204, 21, 0.2), transparent 30%),
+    linear-gradient(135deg, #020617, #7f1d1d);
+}
+
+.elite-delete-recommend-card svg {
+  color: #facc15;
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.elite-delete-recommend-card h4 {
+  font-weight: 950;
+}
+
+.elite-delete-recommend-card p {
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 650;
+}
+
+/* PRODUCT DETAILS */
+
+.elite-delete-image-wrap {
+  position: relative;
+  height: 100%;
+  min-height: 420px;
+  background: #f8fafc;
+}
+
+.elite-delete-image-wrap img {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+}
+
+.elite-featured-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  border-radius: 999px;
+  font-weight: 950;
+}
+
+.elite-status-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border-radius: 999px;
+  font-weight: 950;
+}
+
+.elite-delete-product-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.elite-delete-product-title h3 {
+  font-weight: 950;
+  color: #111827;
+  letter-spacing: -0.03em;
+}
+
+.elite-delete-price-row {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.9rem;
+}
+
+.elite-delete-price-row strong {
+  font-size: 1.8rem;
+  color: #2563eb;
+  font-weight: 950;
+}
+
+.elite-delete-price-row del {
+  color: #94a3b8;
+  font-weight: 800;
+}
+
+.elite-delete-description {
+  color: #475569;
+  max-height: 145px;
+  overflow-y: auto;
+  font-weight: 650;
+  white-space: pre-line;
+}
+
+.elite-delete-list .list-group-item {
+  padding-left: 0;
+  padding-right: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  border-color: #eef2f7;
+}
+
+.elite-delete-list span {
+  color: #64748b;
+  font-weight: 850;
+}
+
+.elite-delete-list strong {
+  color: #111827;
+  font-weight: 950;
+}
+
+.elite-delete-tags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.elite-delete-tags .badge,
+.elite-delete-product-page .badge {
+  border-radius: 999px;
+  font-weight: 850;
+}
+
+/* GALLERY */
+
+.elite-delete-gallery-card h4 {
+  color: #111827;
+  font-weight: 950;
+  margin-bottom: 1rem;
+}
+
+.elite-delete-gallery {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.elite-delete-gallery-item {
+  border: 3px solid transparent;
+  padding: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  background: transparent;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  transition: all 0.2s ease;
+}
+
+.elite-delete-gallery-item:hover {
+  transform: translateY(-4px);
+}
+
+.elite-delete-gallery-item.active {
+  border-color: #2563eb;
+}
+
+.elite-delete-gallery-item img {
+  width: 118px;
+  height: 118px;
+  object-fit: cover;
+}
+
+/* CONFIRM */
+
+.elite-delete-confirm-stack {
+  position: sticky;
+  top: 100px;
+  display: grid;
+  gap: 1rem;
+}
+
+.elite-delete-confirm-card {
+  text-align: center;
+}
+
+.elite-delete-icon {
+  width: 88px;
+  height: 88px;
+  margin: 0 auto 1rem;
+  border-radius: 30px;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  background: linear-gradient(135deg, #dc2626, #991b1b);
+  font-size: 2.25rem;
+  box-shadow: 0 18px 45px rgba(220, 38, 38, 0.25);
+}
+
+.elite-delete-confirm-card h3 {
+  color: #111827;
+  font-weight: 950;
+}
+
+.elite-delete-confirm-card p {
+  color: #64748b;
+  font-weight: 650;
+}
+
+.elite-delete-name-alert {
+  border: 0;
+  border-radius: 20px;
+  text-align: left;
+}
+
+.elite-delete-name-alert span {
+  display: block;
+  margin-top: 0.4rem;
+  font-weight: 950;
+  color: #111827;
+  word-break: break-word;
+}
+
+.elite-delete-progress-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #334155;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+
+.elite-delete-progress {
+  height: 11px;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.elite-delete-progress .progress-bar {
+  background: linear-gradient(135deg, #dc2626, #f97316);
+}
+
+.elite-delete-confirm-card .form-label {
+  font-weight: 900;
+  color: #334155;
+}
+
+.elite-delete-confirm-card .form-control {
+  min-height: 48px;
+  border-radius: 16px;
+  font-weight: 800;
+  border-color: #e5e7eb;
+}
+
+.elite-delete-confirm-card .form-control:focus {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.12);
+}
+
+.elite-delete-confirm-card .form-check {
+  text-align: left;
+  font-weight: 750;
+  padding: 0.9rem 1rem 0.9rem 2.7rem;
+  border-radius: 18px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+}
+
+.elite-delete-button-stack {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.elite-delete-button-stack .btn {
+  min-height: 48px;
+  border-radius: 999px;
+  font-weight: 950;
+}
+
+/* SAFE CARD */
+
+.elite-delete-safe-card .card-body {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.elite-delete-safe-card svg {
+  flex: 0 0 auto;
+  font-size: 2rem;
+  color: #2563eb;
+}
+
+.elite-delete-safe-card h5 {
+  font-weight: 950;
+  color: #111827;
+}
+
+.elite-delete-safe-card p {
+  color: #64748b;
+  font-weight: 650;
+  margin-bottom: 0;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991px) {
+  .elite-delete-hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .elite-delete-hero-actions,
+  .elite-delete-hero-actions .btn {
+    width: 100%;
+  }
+
+  .elite-delete-floating {
+    display: none;
+  }
+
+  .elite-delete-confirm-stack {
+    position: static;
+  }
+
+  .elite-delete-risk-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .elite-delete-product-page {
+    padding-top: 1rem;
+  }
+
+  .elite-delete-hero,
+  .elite-delete-stat-card,
+  .elite-delete-risk-card,
+  .elite-delete-recommend-card,
+  .elite-delete-product-card,
+  .elite-delete-gallery-card,
+  .elite-delete-confirm-card,
+  .elite-delete-safe-card {
+    border-radius: 22px;
+  }
+
+  .elite-delete-hero {
+    padding: 1.25rem;
+  }
+
+  .elite-delete-warning {
+    flex-direction: column;
+  }
+
+  .elite-delete-stat-card .card-body {
+    min-height: 125px;
+  }
+
+  .elite-delete-risk-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .elite-delete-image-wrap,
+  .elite-delete-image-wrap img {
+    min-height: 280px;
+  }
+
+  .elite-delete-gallery-item img {
+    width: 96px;
+    height: 96px;
+  }
+
+  .elite-delete-product-card .card-body,
+  .elite-delete-gallery-card .card-body,
+  .elite-delete-confirm-card .card-body,
+  .elite-delete-safe-card .card-body,
+  .elite-delete-risk-card .card-body,
+  .elite-delete-recommend-card .card-body {
+    padding: 1rem;
+  }
+
+  .elite-delete-safe-card .card-body {
+    flex-direction: column;
+  }
+}

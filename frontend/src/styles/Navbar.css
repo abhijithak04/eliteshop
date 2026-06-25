@@ -1,0 +1,708 @@
+/* ============================= */
+/* ELITESHOP NAVBAR */
+/* ============================= */
+
+body {
+  padding-top: 116px;
+}
+
+/* ============================= */
+/* FIRST NAVBAR */
+/* ============================= */
+
+.elite-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1050;
+  background:
+    radial-gradient(circle at top right, rgba(59, 130, 246, 0.34), transparent 26%),
+    linear-gradient(135deg, #050814, #080b13 45%, #1d4ed8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.25s ease;
+}
+
+.elite-navbar-scrolled {
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.35);
+}
+
+.elite-navbar-main {
+  min-height: 68px;
+  display: grid;
+  grid-template-columns: auto 128px minmax(420px, 1fr) auto;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+/* ============================= */
+/* LOGO */
+/* ============================= */
+
+.elite-logo {
+  text-decoration: none;
+  color: #f8fafc;
+  font-size: 1.65rem;
+  font-weight: 950;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.elite-logo:hover {
+  transform: scale(1.03);
+  color: #facc15;
+}
+
+.elite-logo span {
+  color: #ff2448;
+}
+
+/* ============================= */
+/* LOCATION */
+/* ============================= */
+
+.elite-location {
+  border: 1px solid transparent;
+  background: transparent;
+  color: #ffffff;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.32rem 0.42rem;
+  border-radius: 10px;
+  width: 128px;
+  min-width: 128px;
+  transition: all 0.2s ease;
+}
+
+.elite-location svg {
+  font-size: 0.95rem;
+  color: #f97316;
+  min-width: 14px;
+}
+
+.elite-location span {
+  min-width: 0;
+}
+
+.elite-location:hover {
+  border-color: rgba(250, 204, 21, 0.6);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.elite-location small,
+.elite-login-btn small,
+.elite-account-btn small,
+.elite-order-link small {
+  display: block;
+  color: #cbd5e1;
+  font-size: 0.66rem;
+  line-height: 1;
+  text-align: left;
+}
+
+.elite-location strong,
+.elite-login-btn strong,
+.elite-account-btn strong,
+.elite-order-link strong {
+  display: block;
+  color: #ffffff;
+  font-size: 0.76rem;
+  line-height: 1.1;
+  max-width: 95px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ============================= */
+/* SEARCH */
+/* ============================= */
+
+.elite-search {
+  width: 100%;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 8px 22px rgba(149, 174, 233, 0.22);
+}
+
+.elite-search:focus-within {
+  box-shadow:
+    0 0 0 3px rgba(251, 191, 36, 0.35),
+    0 8px 22px rgba(15, 23, 42, 0.2);
+}
+
+.elite-search select {
+  height: 100%;
+  width: 112px;
+  min-width: 112px;
+  border: 0;
+  outline: none;
+  padding: 0 0.5rem;
+  font-weight: 800;
+  font-size: 0.82rem;
+  color: #334155;
+  background: #f3f4f6;
+  border-right: 1px solid #e5e7eb;
+}
+
+.elite-search input {
+  flex: 1;
+  min-width: 120px;
+  height: 100%;
+  border: 0;
+  outline: none;
+  padding: 0 0.8rem;
+  color: #111827;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.elite-search-clear {
+  border: 0;
+  background: transparent;
+  color: #64748b;
+  padding: 0 0.5rem;
+}
+
+.elite-search-btn {
+  width: 56px;
+  min-width: 56px;
+  height: 100%;
+  border: 0;
+  color: #111827;
+  background: #febd69;
+  display: grid;
+  place-items: center;
+  font-size: 1.05rem;
+  transition: all 0.2s ease;
+}
+
+.elite-search-btn:hover {
+  background: #f3a847;
+}
+
+/* ============================= */
+/* RIGHT ACTIONS */
+/* ============================= */
+
+.elite-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.22rem;
+  min-width: max-content;
+}
+
+.elite-login-btn,
+.elite-account-btn,
+.elite-order-link,
+.elite-icon-link,
+.elite-cart-btn,
+.elite-mobile-menu-btn,
+.elite-sell-link {
+  border: 1px solid transparent;
+  background: transparent;
+  color: #ffffff;
+  min-height: 40px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.38rem;
+  padding: 0.3rem 0.42rem;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.elite-login-btn:hover,
+.elite-account-btn:hover,
+.elite-order-link:hover,
+.elite-icon-link:hover,
+.elite-cart-btn:hover,
+.elite-mobile-menu-btn:hover,
+.elite-sell-link:hover {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.elite-sell-link {
+  min-height: 38px;
+  border-radius: 999px;
+  color: #111827;
+  background: linear-gradient(135deg, #facc15, #fb923c);
+  font-weight: 950;
+  padding: 0.3rem 0.75rem;
+  border: 0;
+  box-shadow: 0 10px 24px rgba(250, 204, 21, 0.2);
+}
+
+.elite-sell-link:hover {
+  color: #111827;
+  background: linear-gradient(135deg, #fde047, #f97316);
+  transform: translateY(-1px);
+}
+
+.elite-account-btn::after,
+.elite-login-btn::after {
+  margin-left: 0.15rem;
+}
+
+.elite-icon-link,
+.elite-mobile-menu-btn {
+  width: 40px;
+  justify-content: center;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.elite-cart-btn {
+  font-weight: 900;
+  font-size: 0.92rem;
+}
+
+.elite-cart-btn svg {
+  font-size: 1.25rem;
+}
+
+.elite-cart-badge,
+.elite-mini-badge {
+  position: absolute;
+  top: -5px;
+  right: -3px;
+  background: #f97316 !important;
+  color: #111827;
+  font-weight: 900;
+  font-size: 0.65rem;
+}
+
+/* ============================= */
+/* DROPDOWN */
+/* ============================= */
+
+.elite-dropdown-menu {
+  border: 0;
+  border-radius: 16px;
+  padding: 0.65rem;
+  min-width: 290px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.22);
+}
+
+.elite-dropdown-menu .dropdown-item {
+  border-radius: 12px;
+  font-weight: 750;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.elite-dropdown-menu .dropdown-item:hover {
+  background: #eef2ff;
+}
+
+.elite-guest-menu .dropdown-item:nth-child(4),
+.elite-guest-menu .dropdown-item:nth-child(5) {
+  color: #14532d;
+}
+
+.elite-dropdown-user {
+  padding: 0.65rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.elite-dropdown-user small {
+  display: block;
+  color: #64748b;
+  font-size: 0.78rem;
+}
+
+.elite-avatar {
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  font-weight: 950;
+  background: linear-gradient(135deg, #2563eb, #ec4899);
+}
+
+/* ============================= */
+/* SECOND NAVBAR */
+/* ============================= */
+
+.elite-category-navbar {
+  position: fixed;
+  top: 68px;
+  left: 0;
+  width: 100%;
+  z-index: 1045;
+  background: rgba(255, 255, 255, 0.52);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.12);
+}
+
+.elite-category-scroll {
+  width: 100%;
+  min-height: 48px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(92px, 1fr));
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0;
+}
+
+.elite-category-item {
+  border: 0;
+  background: transparent;
+  color: #111827;
+  width: 100%;
+  min-width: 0;
+  height: 38px;
+  padding: 0 0.5rem;
+  border-radius: 9px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.38rem;
+  font-weight: 850;
+  font-size: 0.82rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 0.2s ease;
+}
+
+.elite-category-item svg {
+  min-width: 14px;
+  font-size: 0.95rem;
+}
+
+.elite-category-item span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.elite-category-item:hover,
+.elite-category-item.active {
+  background: rgba(37, 99, 235, 0.1);
+  transform: translateY(-1px);
+}
+
+.elite-category-item.active {
+  color: #1d4ed8;
+}
+
+.elite-role-pill {
+  border: 0;
+  color: #eb1212;
+  width: 100%;
+  min-width: 0;
+  height: 36px;
+  padding: 0 0.6rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  font-weight: 950;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.16);
+}
+
+.elite-role-pill.admin {
+  background: linear-gradient(135deg, #dc2626, #7c3aed);
+}
+
+
+
+.elite-role-pill.seller.guest {
+  color: #e03408;
+ 
+}
+
+.elite-role-pill.seller.pending {
+  color: #bb130d;
+  
+}
+
+/* ============================= */
+/* MOBILE OFFCANVAS */
+/* ============================= */
+
+.elite-mobile-offcanvas .offcanvas-title {
+  font-weight: 950;
+  color: #2563eb;
+}
+
+.elite-mobile-offcanvas .offcanvas-title span {
+  color: #ff2448;
+}
+
+.elite-mobile-user-box {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 18px;
+  background: #f8fafc;
+}
+
+.elite-mobile-user-box small {
+  display: block;
+  color: #64748b;
+}
+
+.elite-mobile-auth-buttons {
+  width: 100%;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.elite-mobile-links {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.elite-mobile-links button {
+  border: 0;
+  background: #f8fafc;
+  border-radius: 14px;
+  padding: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 850;
+  color: #111827;
+  transition: all 0.2s ease;
+}
+
+.elite-mobile-links button:hover {
+  background: #eef2ff;
+  transform: translateX(3px);
+}
+
+/* ============================= */
+/* LARGE LAPTOP FIX */
+/* ============================= */
+
+@media (max-width: 1399px) {
+  .elite-navbar-main {
+    grid-template-columns: auto 118px minmax(360px, 1fr) auto;
+  }
+
+  .elite-location {
+    width: 118px;
+    min-width: 118px;
+  }
+
+  .elite-location strong {
+    max-width: 84px;
+  }
+
+  .elite-logo {
+    font-size: 1.5rem;
+  }
+
+  .elite-order-link {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1199px) {
+  .elite-navbar-main {
+    grid-template-columns: auto 105px minmax(300px, 1fr) auto;
+    gap: 0.5rem;
+  }
+
+  .elite-location {
+    width: 105px;
+    min-width: 105px;
+    padding: 0.25rem 0.35rem;
+  }
+
+  .elite-location small {
+    font-size: 0.62rem;
+  }
+
+  .elite-location strong {
+    font-size: 0.7rem;
+    max-width: 70px;
+  }
+
+  .elite-search select {
+    width: 95px;
+    min-width: 95px;
+  }
+
+  .elite-icon-link {
+    display: none !important;
+  }
+}
+
+/* ============================= */
+/* TABLET FIX */
+/* ============================= */
+
+@media (max-width: 991px) {
+  body {
+    padding-top: 164px;
+  }
+
+  .elite-navbar-main {
+    min-height: 108px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+      "logo actions"
+      "search search";
+    gap: 0.55rem;
+    padding: 0.6rem 0;
+  }
+
+  .elite-logo {
+    grid-area: logo;
+    font-size: 1.45rem;
+  }
+
+  .elite-actions {
+    grid-area: actions;
+  }
+
+  .elite-location {
+    display: none !important;
+  }
+
+  .elite-search {
+    grid-area: search;
+    height: 42px;
+    width: 100%;
+  }
+
+  .elite-category-navbar {
+    top: 116px;
+  }
+
+  .elite-category-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.45rem;
+    padding: 0.45rem 0;
+    scrollbar-width: none;
+  }
+
+  .elite-category-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .elite-category-item {
+    width: auto;
+    min-width: max-content;
+    padding: 0 0.75rem;
+  }
+
+  .elite-role-pill {
+    width: auto;
+    min-width: max-content;
+  }
+
+  .elite-login-btn span,
+  .elite-account-btn span,
+  .elite-order-link,
+  .elite-icon-link,
+  .elite-sell-link {
+    display: none !important;
+  }
+}
+
+/* ============================= */
+/* MOBILE FIX */
+/* ============================= */
+
+@media (max-width: 576px) {
+  body {
+    padding-top: 158px;
+  }
+
+  .elite-navbar-main {
+    grid-template-columns: auto auto;
+  }
+
+  .elite-logo {
+    font-size: 1.28rem;
+  }
+
+  .elite-search {
+    height: 40px;
+  }
+
+  .elite-search select {
+    width: 85px;
+    min-width: 85px;
+    font-size: 0.75rem;
+    padding: 0 0.35rem;
+  }
+
+  .elite-search input {
+    font-size: 0.82rem;
+    padding: 0 0.5rem;
+  }
+
+  .elite-search-btn {
+    width: 44px;
+    min-width: 44px;
+  }
+
+  .elite-cart-btn span {
+    display: none;
+  }
+
+  .elite-actions {
+    gap: 0.2rem;
+  }
+
+  .elite-cart-btn,
+  .elite-mobile-menu-btn,
+  .elite-login-btn,
+  .elite-account-btn {
+    min-height: 38px;
+  }
+
+  .elite-category-navbar {
+    top: 110px;
+  }
+
+  .elite-category-item {
+    height: 36px;
+    font-size: 0.78rem;
+  }
+}
+
+/* ============================= */
+/* VERY SMALL MOBILE */
+/* ============================= */
+
+@media (max-width: 380px) {
+  .elite-logo {
+    font-size: 1.1rem;
+  }
+
+  .elite-search select {
+    display: none;
+  }
+
+  .elite-search input {
+    font-size: 0.78rem;
+  }
+}

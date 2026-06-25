@@ -1,0 +1,394 @@
+.elite-admin-approvals-page {
+  padding: 1.5rem 0 3rem;
+}
+
+.elite-approvals-hero {
+  border-radius: 32px;
+  padding: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.18), transparent 30%),
+    linear-gradient(135deg, #020617, #2563eb, #7c3aed);
+  box-shadow: 0 26px 70px rgba(37, 99, 235, 0.25);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.elite-approvals-hero::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  right: -80px;
+  top: -80px;
+  background: rgba(250, 204, 21, 0.18);
+  filter: blur(2px);
+}
+
+.elite-approvals-hero > * {
+  position: relative;
+  z-index: 2;
+}
+
+.elite-approvals-hero-badge {
+  border-radius: 999px;
+  padding: 0.65rem 0.9rem;
+  font-weight: 900;
+}
+
+.elite-approvals-hero h1 {
+  font-size: clamp(2rem, 5vw, 3.8rem);
+  font-weight: 950;
+  margin-bottom: 0.4rem;
+}
+
+.elite-approvals-hero p {
+  max-width: 780px;
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.elite-refresh-hero-btn {
+  border-radius: 999px;
+  font-weight: 900;
+  min-width: 135px;
+}
+
+.elite-approval-stat-card {
+  border: 0;
+  border-radius: 26px;
+  color: #ffffff;
+  box-shadow: 0 20px 55px rgba(15, 23, 42, 0.14);
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.elite-approval-stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 26px 70px rgba(15, 23, 42, 0.18);
+}
+
+.elite-approval-stat-card .card-body {
+  min-height: 135px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.elite-approval-stat-card span {
+  display: block;
+  opacity: 0.88;
+  font-weight: 800;
+}
+
+.elite-approval-stat-card h2 {
+  font-size: 2.4rem;
+  font-weight: 950;
+  margin: 0.25rem 0;
+}
+
+.elite-approval-stat-card p {
+  margin: 0;
+  opacity: 0.78;
+}
+
+.elite-approval-stat-card svg {
+  font-size: 3rem;
+  opacity: 0.92;
+}
+
+.elite-approval-stat-card.pending {
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+}
+
+.elite-approval-stat-card.approved {
+  background: linear-gradient(135deg, #15803d, #22c55e);
+}
+
+.elite-approval-stat-card.total {
+  background: linear-gradient(135deg, #111827, #2563eb);
+}
+
+.elite-approval-control-card,
+.elite-approval-table-card {
+  border: 0;
+  border-radius: 28px;
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.1);
+}
+
+.elite-approval-control-card .card-body,
+.elite-approval-table-card .card-body {
+  padding: 1.4rem;
+}
+
+.elite-approval-search {
+  min-height: 48px;
+  border-radius: 999px;
+  padding: 0 1rem;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.elite-approval-search svg {
+  color: #64748b;
+}
+
+.elite-approval-search input {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-weight: 700;
+  color: #111827;
+}
+
+.elite-approval-control-card .form-select {
+  min-height: 48px;
+  border-radius: 999px;
+  font-weight: 800;
+}
+
+.elite-reload-btn {
+  border: 0;
+  border-radius: 999px;
+  min-height: 48px;
+  font-weight: 900;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+}
+
+.elite-reload-btn:hover {
+  background: linear-gradient(135deg, #1d4ed8, #6d28d9);
+}
+
+.elite-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.elite-table-header h3 {
+  font-weight: 950;
+  margin-bottom: 0.25rem;
+}
+
+.elite-table-header p {
+  margin-bottom: 0;
+  color: #64748b;
+}
+
+.elite-approval-table thead th {
+  color: #475569;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.elite-approval-table tbody td {
+  vertical-align: middle;
+}
+
+.elite-seller-user {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.elite-seller-user img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border: 3px solid #eef2ff;
+}
+
+.elite-seller-user strong {
+  display: block;
+  color: #111827;
+}
+
+.elite-seller-user small {
+  color: #64748b;
+}
+
+.elite-shop-info strong,
+.elite-shop-info small {
+  display: block;
+}
+
+.elite-shop-info small {
+  color: #64748b;
+  margin-top: 0.2rem;
+}
+
+.elite-contact-lines {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.elite-contact-lines span {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #475569;
+  font-size: 0.88rem;
+}
+
+.elite-contact-lines svg {
+  color: #2563eb;
+}
+
+.elite-action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.elite-action-buttons .btn {
+  border-radius: 999px;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.elite-empty-approval {
+  min-height: 320px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #64748b;
+  padding: 2rem;
+}
+
+.elite-empty-approval svg {
+  font-size: 3.3rem;
+  color: #f59e0b;
+  margin-bottom: 1rem;
+}
+
+.elite-empty-approval h4 {
+  color: #111827;
+  font-weight: 950;
+}
+
+.elite-empty-approval p {
+  max-width: 560px;
+  margin-bottom: 0;
+}
+
+.elite-seller-modal .modal-content {
+  border: 0;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 28px 80px rgba(15, 23, 42, 0.24);
+}
+
+.elite-seller-modal .modal-header {
+  color: #ffffff;
+  background: linear-gradient(135deg, #020617, #2563eb);
+}
+
+.elite-seller-modal .modal-title {
+  font-weight: 950;
+}
+
+.elite-modal-seller-top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.elite-modal-seller-top img {
+  width: 86px;
+  height: 86px;
+  object-fit: cover;
+  border: 4px solid #eef2ff;
+}
+
+.elite-modal-seller-top h4 {
+  font-weight: 950;
+  margin-bottom: 0.2rem;
+}
+
+.elite-modal-seller-top p {
+  color: #64748b;
+  margin-bottom: 0.55rem;
+}
+
+.elite-modal-info-box {
+  height: 100%;
+  padding: 1rem;
+  border-radius: 22px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+}
+
+.elite-modal-info-box svg {
+  color: #2563eb;
+  font-size: 1.35rem;
+  margin-bottom: 0.65rem;
+}
+
+.elite-modal-info-box span {
+  display: block;
+  color: #64748b;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.elite-modal-info-box strong {
+  display: block;
+  color: #111827;
+  word-break: break-word;
+}
+
+.elite-modal-alert {
+  border: 0;
+  border-radius: 18px;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .elite-approvals-hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .elite-action-buttons {
+    justify-content: flex-start;
+  }
+
+  .elite-modal-seller-top {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  .elite-admin-approvals-page {
+    padding-top: 1rem;
+  }
+
+  .elite-approvals-hero,
+  .elite-approval-stat-card,
+  .elite-approval-control-card,
+  .elite-approval-table-card {
+    border-radius: 22px;
+  }
+
+  .elite-action-buttons .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

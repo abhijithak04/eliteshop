@@ -1,0 +1,417 @@
+/* ======================================================
+   ELITESHOP FOOTER
+   File: frontend/src/styles/Footer.css
+====================================================== */
+
+.elite-footer {
+  position: relative;
+  margin-top: 3rem;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at top left, rgba(250, 204, 21, 0.15), transparent 28%),
+    radial-gradient(circle at top right, rgba(37, 99, 235, 0.18), transparent 28%),
+    linear-gradient(135deg, #020617, #111827 45%, #172554);
+  overflow: hidden;
+}
+
+.elite-footer::before {
+  content: "";
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  right: -160px;
+  top: 80px;
+  border-radius: 50%;
+  background: rgba(250, 204, 21, 0.09);
+}
+
+.elite-footer::after {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  left: -150px;
+  bottom: -120px;
+  border-radius: 50%;
+  background: rgba(37, 99, 235, 0.12);
+}
+
+.elite-footer > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* SERVICE STRIP */
+
+.elite-footer-service-strip {
+  padding: 1.25rem 0;
+  background: rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.elite-footer-service-card {
+  height: 100%;
+  padding: 1rem;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  backdrop-filter: blur(16px);
+  transition: all 0.22s ease;
+}
+
+.elite-footer-service-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.elite-footer-service-card > div {
+  flex: 0 0 52px;
+  width: 52px;
+  height: 52px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  color: #111827;
+  font-size: 1.35rem;
+  background: linear-gradient(135deg, #facc15, #fb923c);
+  box-shadow: 0 16px 38px rgba(250, 204, 21, 0.18);
+}
+
+.elite-footer-service-card strong {
+  display: block;
+  font-weight: 950;
+  color: #ffffff;
+}
+
+.elite-footer-service-card small {
+  display: block;
+  color: rgba(255, 255, 255, 0.68);
+  font-weight: 650;
+}
+
+/* MAIN */
+
+.elite-footer-main {
+  padding: 3rem 0 1.25rem;
+}
+
+.elite-footer-brand-box p,
+.elite-footer-newsletter p,
+.elite-footer-contact p {
+  color: rgba(255, 255, 255, 0.68);
+  font-weight: 650;
+  line-height: 1.75;
+}
+
+.elite-footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 950;
+  letter-spacing: -0.05em;
+  margin-bottom: 1rem;
+}
+
+.elite-footer-logo:hover {
+  color: #ffffff;
+}
+
+.elite-footer-logo > span:first-child {
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  color: #111827;
+  background: linear-gradient(135deg, #facc15, #fb923c);
+}
+
+.elite-footer-logo > span:last-child {
+  color: #facc15;
+}
+
+.elite-footer-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 1rem 0;
+}
+
+.elite-footer-badges .badge {
+  border-radius: 999px;
+  padding: 0.55rem 0.75rem;
+  font-weight: 900;
+}
+
+.elite-footer-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.elite-footer-socials a {
+  width: 42px;
+  height: 42px;
+  border-radius: 15px;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: all 0.22s ease;
+}
+
+.elite-footer-socials a:hover {
+  color: #111827;
+  background: linear-gradient(135deg, #facc15, #fb923c);
+  transform: translateY(-4px);
+}
+
+/* LINKS */
+
+.elite-footer-links h5,
+.elite-footer-contact h5 {
+  color: #ffffff;
+  font-weight: 950;
+  margin-bottom: 1rem;
+}
+
+.elite-footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.elite-footer-links li {
+  margin-bottom: 0.65rem;
+}
+
+.elite-footer-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: rgba(255, 255, 255, 0.72);
+  text-decoration: none;
+  font-weight: 750;
+  transition: all 0.2s ease;
+}
+
+.elite-footer-links a svg {
+  color: #facc15;
+}
+
+.elite-footer-links a:hover {
+  color: #ffffff;
+  transform: translateX(5px);
+}
+
+/* CONTACT */
+
+.elite-footer-contact p {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  margin-bottom: 0.75rem;
+}
+
+.elite-footer-contact p svg {
+  flex: 0 0 auto;
+  color: #facc15;
+  margin-top: 0.25rem;
+}
+
+.elite-footer-support-btn {
+  width: fit-content;
+  min-height: 44px;
+  padding: 0 1rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: #111827;
+  text-decoration: none;
+  font-weight: 950;
+  background: linear-gradient(135deg, #facc15, #fb923c);
+  transition: all 0.22s ease;
+}
+
+.elite-footer-support-btn:hover {
+  color: #111827;
+  transform: translateY(-3px);
+}
+
+/* NEWSLETTER */
+
+.elite-footer-newsletter {
+  margin-top: 2rem;
+  padding: 1.25rem;
+  border-radius: 30px;
+  display: grid;
+  grid-template-columns: 1fr minmax(320px, 460px);
+  gap: 1rem;
+  align-items: center;
+  background:
+    radial-gradient(circle at top right, rgba(250, 204, 21, 0.18), transparent 30%),
+    rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(18px);
+}
+
+.elite-footer-newsletter .badge {
+  width: fit-content;
+  border-radius: 999px;
+  font-weight: 950;
+  margin-bottom: 0.55rem;
+}
+
+.elite-footer-newsletter h4 {
+  color: #ffffff;
+  font-weight: 950;
+  letter-spacing: -0.04em;
+  margin-bottom: 0.35rem;
+}
+
+.elite-footer-newsletter p {
+  margin-bottom: 0;
+}
+
+.elite-footer-newsletter-form {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.elite-footer-newsletter-form > div {
+  flex: 1;
+  min-height: 52px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0 1rem;
+  background: #ffffff;
+  border: 2px solid transparent;
+}
+
+.elite-footer-newsletter-form > div:focus-within {
+  border-color: #facc15;
+  box-shadow: 0 0 0 4px rgba(250, 204, 21, 0.16);
+}
+
+.elite-footer-newsletter-form svg {
+  color: #2563eb;
+}
+
+.elite-footer-newsletter-form input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  color: #111827;
+  font-weight: 750;
+}
+
+.elite-footer-newsletter-form button {
+  min-height: 52px;
+  border: 0;
+  border-radius: 999px;
+  padding: 0 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: #111827;
+  font-weight: 950;
+  background: linear-gradient(135deg, #facc15, #fb923c);
+}
+
+.elite-footer-newsletter-form button:hover {
+  color: #111827;
+  background: linear-gradient(135deg, #eab308, #f97316);
+}
+
+/* PAYMENTS */
+
+.elite-footer-payments {
+  margin-top: 1.25rem;
+  padding: 1rem;
+  border-radius: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.05);
+  font-weight: 800;
+}
+
+.elite-footer-payments span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.elite-footer-payments svg {
+  color: #facc15;
+}
+
+/* BOTTOM */
+
+.elite-footer-bottom {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: rgba(255, 255, 255, 0.68);
+  font-weight: 750;
+}
+
+.elite-footer-bottom p {
+  margin: 0;
+}
+
+.elite-footer-bottom svg {
+  color: #ef4444;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991px) {
+  .elite-footer-newsletter {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .elite-footer-main {
+    padding-top: 2rem;
+  }
+
+  .elite-footer-service-card {
+    border-radius: 20px;
+  }
+
+  .elite-footer-newsletter {
+    border-radius: 24px;
+  }
+
+  .elite-footer-newsletter-form {
+    display: grid;
+  }
+
+  .elite-footer-bottom {
+    display: grid;
+    text-align: center;
+  }
+
+  .elite-footer-payments {
+    justify-content: flex-start;
+  }
+}

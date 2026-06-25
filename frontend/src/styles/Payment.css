@@ -1,0 +1,542 @@
+
+
+.elite-payment-page {
+  min-height: 100vh;
+  padding: 1.5rem 0 3rem;
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.1), transparent 28%),
+    radial-gradient(circle at top right, rgba(236, 72, 153, 0.09), transparent 28%),
+    linear-gradient(180deg, #f8fafc, #eef2ff 45%, #ffffff);
+}
+
+/* HERO */
+
+.elite-payment-hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 34px;
+  padding: 2rem;
+  margin-bottom: 1.2rem;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at top right, rgba(250, 204, 21, 0.22), transparent 28%),
+    radial-gradient(circle at bottom left, rgba(236, 72, 153, 0.2), transparent 30%),
+    linear-gradient(135deg, #020617, #172554 45%, #7c3aed);
+  box-shadow: 0 28px 75px rgba(124, 58, 237, 0.25);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.elite-payment-hero::before {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  right: -120px;
+  top: -130px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.elite-payment-hero::after {
+  content: "";
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  left: -90px;
+  bottom: -100px;
+  border-radius: 50%;
+  background: rgba(250, 204, 21, 0.12);
+}
+
+.elite-payment-hero > * {
+  position: relative;
+  z-index: 2;
+}
+
+.elite-payment-hero-badge {
+  border-radius: 999px;
+  padding: 0.65rem 1rem;
+  font-weight: 950;
+}
+
+.elite-payment-hero h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 950;
+  margin: 0.9rem 0 0.35rem;
+  letter-spacing: -0.05em;
+}
+
+.elite-payment-hero p {
+  max-width: 760px;
+  color: rgba(255, 255, 255, 0.82);
+  margin-bottom: 0;
+}
+
+.elite-payment-hero-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.elite-payment-hero-actions .btn {
+  min-height: 46px;
+  border-radius: 999px;
+  font-weight: 950;
+}
+
+.elite-payment-floating-badge {
+  position: absolute;
+  right: 2rem;
+  bottom: 1rem;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
+  color: #111827;
+  background: linear-gradient(135deg, #facc15, #fb923c);
+  font-weight: 950;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+}
+
+/* CHECKOUT STEPS */
+
+.elite-payment-steps {
+  margin-bottom: 1.5rem;
+}
+
+.elite-payment-steps a,
+.elite-payment-steps span {
+  font-weight: 850;
+}
+
+/* CARDS */
+
+.elite-payment-card,
+.elite-payment-summary-card,
+.elite-payment-address-card,
+.elite-payment-trust-card {
+  border: 0;
+  border-radius: 30px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.1);
+}
+
+.elite-payment-card .card-body,
+.elite-payment-summary-card .card-body,
+.elite-payment-address-card .card-body,
+.elite-payment-trust-card .card-body {
+  padding: 1.35rem;
+}
+
+.elite-payment-card-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.elite-payment-card-heading h2 {
+  color: #020617;
+  font-weight: 950;
+  letter-spacing: -0.04em;
+  margin-bottom: 0.25rem;
+}
+
+.elite-payment-card-heading p {
+  color: #64748b;
+  margin-bottom: 0;
+  font-weight: 650;
+}
+
+/* OPTIONS */
+
+.elite-payment-options {
+  display: grid;
+  gap: 1rem;
+}
+
+.elite-payment-option {
+  cursor: pointer;
+  position: relative;
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 26px;
+  background:
+    radial-gradient(circle at top right, rgba(37, 99, 235, 0.06), transparent 30%),
+    #ffffff;
+  transition: all 0.22s ease;
+}
+
+.elite-payment-option:hover,
+.elite-payment-option.active {
+  transform: translateY(-4px);
+  border-color: #2563eb;
+  box-shadow: 0 18px 45px rgba(37, 99, 235, 0.14);
+}
+
+.elite-payment-option.cod.active {
+  border-color: #16a34a;
+  box-shadow: 0 18px 45px rgba(22, 163, 74, 0.14);
+}
+
+.elite-payment-option input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.elite-payment-option-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 22px;
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  font-size: 1.9rem;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  box-shadow: 0 14px 35px rgba(37, 99, 235, 0.2);
+}
+
+.elite-payment-option-icon.cod {
+  background: linear-gradient(135deg, #047857, #22c55e);
+}
+
+.elite-payment-option-content > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.elite-payment-option-content h4 {
+  color: #020617;
+  font-weight: 950;
+  margin-bottom: 0;
+}
+
+.elite-payment-option-content p {
+  color: #64748b;
+  font-weight: 650;
+  margin: 0.5rem 0;
+}
+
+.elite-payment-tags {
+  display: flex;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.elite-payment-tags span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.42rem 0.6rem;
+  border-radius: 999px;
+  background: #f8fafc;
+  color: #334155;
+  border: 1px solid #e5e7eb;
+  font-weight: 850;
+  font-size: 0.82rem;
+}
+
+.elite-payment-tags svg {
+  color: #2563eb;
+}
+
+.elite-payment-alert {
+  border: 0;
+  border-radius: 18px;
+  font-weight: 800;
+  margin-top: 1rem;
+}
+
+/* ACTIONS */
+
+.elite-payment-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.elite-payment-actions .btn {
+  min-height: 48px;
+  border-radius: 999px;
+  font-weight: 950;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+}
+
+.elite-payment-submit-btn {
+  border: 0;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  box-shadow: 0 16px 38px rgba(37, 99, 235, 0.22);
+}
+
+.elite-payment-submit-btn:hover {
+  background: linear-gradient(135deg, #1d4ed8, #6d28d9);
+}
+
+/* SIDE */
+
+.elite-payment-side-stack {
+  display: grid;
+  gap: 1rem;
+  position: sticky;
+  top: 150px;
+}
+
+.elite-payment-summary-card .card-header {
+  border: 0;
+  padding: 1rem;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 950;
+  background: linear-gradient(135deg, #020617, #2563eb);
+}
+
+.elite-payment-summary-line,
+.elite-payment-total-line {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px dashed #cbd5e1;
+}
+
+.elite-payment-summary-line span {
+  color: #64748b;
+  font-weight: 850;
+}
+
+.elite-payment-summary-line strong {
+  color: #020617;
+  font-weight: 950;
+}
+
+.elite-payment-total-line {
+  border-bottom: 0;
+  margin-top: 0.4rem;
+}
+
+.elite-payment-total-line span,
+.elite-payment-total-line strong {
+  color: #020617;
+  font-size: 1.25rem;
+  font-weight: 950;
+}
+
+.elite-payment-total-line strong {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ADDRESS */
+
+.elite-payment-address-card h4 {
+  color: #020617;
+  font-weight: 950;
+  margin-bottom: 1rem;
+}
+
+.elite-payment-address-card strong {
+  display: block;
+  color: #020617;
+  font-weight: 950;
+}
+
+.elite-payment-address-card span {
+  display: block;
+  color: #334155;
+  font-weight: 850;
+  margin: 0.3rem 0;
+}
+
+.elite-payment-address-card p {
+  color: #64748b;
+  font-weight: 650;
+}
+
+.elite-payment-address-card .btn {
+  border-radius: 999px;
+  font-weight: 900;
+}
+
+/* TRUST */
+
+.elite-payment-trust-card .card-body {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.elite-payment-trust-card .card-body div {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  border-radius: 16px;
+  padding: 0.8rem;
+  background: #f8fafc;
+  color: #334155;
+  font-weight: 850;
+}
+
+.elite-payment-trust-card svg {
+  color: #2563eb;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991px) {
+  .elite-payment-hero,
+  .elite-payment-card-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .elite-payment-hero-actions,
+  .elite-payment-hero-actions .btn {
+    width: 100%;
+  }
+
+  .elite-payment-floating-badge {
+    display: none;
+  }
+
+  .elite-payment-side-stack {
+    position: static;
+  }
+}
+
+@media (max-width: 576px) {
+  .elite-payment-page {
+    padding-top: 1rem;
+  }
+
+  .elite-payment-hero,
+  .elite-payment-card,
+  .elite-payment-summary-card,
+  .elite-payment-address-card,
+  .elite-payment-trust-card {
+    border-radius: 22px;
+  }
+
+  .elite-payment-hero {
+    padding: 1.25rem;
+  }
+
+  .elite-payment-card .card-body,
+  .elite-payment-summary-card .card-body,
+  .elite-payment-address-card .card-body,
+  .elite-payment-trust-card .card-body {
+    padding: 1rem;
+  }
+
+  .elite-payment-option {
+    grid-template-columns: 1fr;
+  }
+
+  .elite-payment-option-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 18px;
+    font-size: 1.5rem;
+  }
+
+  .elite-payment-actions {
+    flex-direction: column;
+  }
+
+  .elite-payment-actions .btn {
+    width: 100%;
+  }
+}
+.elite-payment-selected-box {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at top right, rgba(37, 99, 235, 0.08), transparent 30%),
+    #f8fafc;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.elite-payment-selected-box span {
+  display: block;
+  color: #64748b;
+  font-weight: 850;
+}
+
+.elite-payment-selected-box strong {
+  display: block;
+  color: #020617;
+  font-weight: 950;
+}
+
+.elite-payment-method-preview-card {
+  border: 0;
+  border-radius: 30px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.1);
+}
+
+.elite-payment-method-preview-card .card-body {
+  padding: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.elite-payment-preview-icon {
+  flex: 0 0 58px;
+  width: 58px;
+  height: 58px;
+  border-radius: 20px;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  font-size: 1.5rem;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+}
+
+.elite-payment-method-preview-card span {
+  color: #64748b;
+  font-weight: 750;
+}
+
+.elite-payment-method-preview-card strong {
+  display: block;
+  color: #020617;
+  font-weight: 950;
+}
+
+.elite-payment-method-preview-card small {
+  color: #64748b;
+  font-weight: 650;
+}
+
+@media (max-width: 576px) {
+  .elite-payment-selected-box {
+    display: grid;
+  }
+
+  .elite-payment-method-preview-card {
+    border-radius: 22px;
+  }
+}

@@ -1,0 +1,856 @@
+/* ======================================================
+   ELITESHOP PRODUCT DETAILS PAGE
+   File: frontend/src/styles/ProductDetails.css
+====================================================== */
+
+.elite-product-details-page {
+  min-height: 100vh;
+  padding: 1.5rem 0 3rem;
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.1), transparent 28%),
+    radial-gradient(circle at top right, rgba(236, 72, 153, 0.08), transparent 28%),
+    linear-gradient(180deg, #f8fafc, #eef2ff 45%, #ffffff);
+}
+
+.elite-product-details-loader {
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+}
+
+/* HERO */
+
+.elite-details-hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 34px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at top right, rgba(250, 204, 21, 0.22), transparent 28%),
+    radial-gradient(circle at bottom left, rgba(236, 72, 153, 0.18), transparent 30%),
+    linear-gradient(135deg, #020617, #172554 45%, #7c3aed);
+  box-shadow: 0 28px 75px rgba(37, 99, 235, 0.25);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.elite-details-hero::before {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  right: -120px;
+  top: -130px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.elite-details-hero::after {
+  content: "";
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  left: -90px;
+  bottom: -100px;
+  border-radius: 50%;
+  background: rgba(250, 204, 21, 0.12);
+}
+
+.elite-details-hero > * {
+  position: relative;
+  z-index: 2;
+}
+
+.elite-details-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.8rem;
+}
+
+.elite-details-breadcrumb a,
+.elite-details-breadcrumb span {
+  color: rgba(255, 255, 255, 0.72);
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.elite-details-breadcrumb a:hover {
+  color: #facc15;
+}
+
+.elite-details-hero-badge {
+  border-radius: 999px;
+  padding: 0.65rem 1rem;
+  font-weight: 950;
+}
+
+.elite-details-hero h1 {
+  font-size: clamp(1.9rem, 5vw, 3.7rem);
+  font-weight: 950;
+  margin: 0.9rem 0 0.35rem;
+  letter-spacing: -0.05em;
+  line-height: 1.03;
+}
+
+.elite-details-hero p {
+  max-width: 760px;
+  color: rgba(255, 255, 255, 0.82);
+  margin-bottom: 0;
+  font-weight: 650;
+}
+
+.elite-details-hero-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.elite-details-hero-actions .btn {
+  min-height: 46px;
+  border-radius: 999px;
+  font-weight: 950;
+}
+
+.elite-details-floating-badge {
+  position: absolute;
+  right: 2rem;
+  bottom: 1rem;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
+  color: #111827;
+  background: linear-gradient(135deg, #facc15, #fb923c);
+  font-weight: 950;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+}
+
+/* CARDS */
+
+.elite-details-gallery-card,
+.elite-details-info-card,
+.elite-details-buy-card,
+.elite-details-trust-card,
+.elite-details-reviews-card,
+.elite-details-review-form-card,
+.elite-details-seller-card,
+.elite-policy-card {
+  border: 0;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.1);
+  overflow: hidden;
+}
+
+/* GALLERY */
+
+.elite-details-main-image-wrap {
+  position: relative;
+  min-height: 530px;
+  background:
+    radial-gradient(circle at top right, rgba(37, 99, 235, 0.1), transparent 30%),
+    #f8fafc;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.elite-details-main-image {
+  width: 100%;
+  height: 530px;
+  object-fit: cover;
+  transition: all 0.35s ease;
+}
+
+.elite-details-main-image-wrap:hover .elite-details-main-image {
+  transform: scale(1.06);
+  filter: brightness(0.9);
+}
+
+.elite-details-featured-badge,
+.elite-details-discount-badge {
+  position: absolute;
+  top: 14px;
+  z-index: 4;
+  border-radius: 999px;
+  padding: 0.55rem 0.75rem;
+  font-weight: 950;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.elite-details-featured-badge {
+  left: 14px;
+  background: linear-gradient(135deg, #7c3aed, #ec4899) !important;
+}
+
+.elite-details-discount-badge {
+  right: 14px;
+  background: linear-gradient(135deg, #dc2626, #f97316) !important;
+}
+
+.elite-details-gallery-nav {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  color: #111827;
+  background: rgba(255, 255, 255, 0.92);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.18);
+  transition: all 0.2s ease;
+}
+
+.elite-details-gallery-nav:hover {
+  color: #ffffff;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+}
+
+.elite-details-gallery-nav.prev {
+  left: 14px;
+}
+
+.elite-details-gallery-nav.next {
+  right: 14px;
+}
+
+.elite-details-thumb-row {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding: 1rem;
+  background: #ffffff;
+}
+
+.elite-details-thumb {
+  min-width: 86px;
+  width: 86px;
+  height: 86px;
+  border: 3px solid transparent;
+  border-radius: 18px;
+  overflow: hidden;
+  padding: 0;
+  background: #f8fafc;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+  transition: all 0.2s ease;
+}
+
+.elite-details-thumb.active {
+  border-color: #2563eb;
+}
+
+.elite-details-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.elite-details-gallery-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  padding: 0 1rem 1rem;
+}
+
+.elite-details-gallery-info div {
+  border-radius: 18px;
+  padding: 0.85rem;
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: #334155;
+  font-weight: 850;
+}
+
+.elite-details-gallery-info svg {
+  color: #2563eb;
+}
+
+/* INFO */
+
+.elite-details-info-card .card-body,
+.elite-details-buy-card .card-body,
+.elite-details-trust-card .card-body,
+.elite-details-reviews-card .card-body,
+.elite-details-review-form-card .card-body,
+.elite-details-seller-card .card-body {
+  padding: 1.35rem;
+}
+
+.elite-details-title-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.elite-details-title-row h2 {
+  font-size: clamp(1.7rem, 4vw, 2.45rem);
+  font-weight: 950;
+  color: #020617;
+  margin: 0.65rem 0 0;
+  letter-spacing: -0.055em;
+  line-height: 1.08;
+}
+
+.elite-details-icon-btn {
+  min-width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.elite-details-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.elite-details-price-row {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.elite-details-price-row strong {
+  color: #020617;
+  font-size: 2.15rem;
+  font-weight: 950;
+  letter-spacing: -0.06em;
+}
+
+.elite-details-price-row del {
+  color: #94a3b8;
+  font-weight: 850;
+}
+
+.elite-details-description {
+  color: #475569;
+  font-weight: 650;
+  line-height: 1.75;
+  white-space: pre-line;
+}
+
+.elite-details-highlight-box {
+  padding: 1rem;
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at top right, rgba(250, 204, 21, 0.13), transparent 30%),
+    #f8fafc;
+  border: 1px solid #e5e7eb;
+  margin: 1rem 0;
+}
+
+.elite-details-highlight-box h5 {
+  color: #020617;
+  font-weight: 950;
+  margin-bottom: 0.75rem;
+}
+
+.elite-details-highlight-box > div {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.elite-details-highlight-box span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #334155;
+  font-weight: 800;
+}
+
+.elite-details-highlight-box svg {
+  color: #047857;
+}
+
+.elite-details-metric-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.elite-details-metric-grid div {
+  border-radius: 20px;
+  padding: 0.85rem;
+  text-align: center;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+}
+
+.elite-details-metric-grid svg {
+  color: #2563eb;
+  margin-bottom: 0.35rem;
+}
+
+.elite-details-metric-grid span {
+  display: block;
+  color: #020617;
+  font-weight: 950;
+}
+
+.elite-details-metric-grid small {
+  color: #64748b;
+  font-weight: 800;
+}
+
+.elite-details-list .list-group-item {
+  padding: 0.85rem 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.elite-details-list span {
+  color: #64748b;
+  font-weight: 850;
+}
+
+.elite-details-list strong {
+  color: #111827;
+  text-align: right;
+}
+
+/* BUY CARD */
+
+.elite-details-buy-stack {
+  display: grid;
+  gap: 1rem;
+  position: sticky;
+  top: 150px;
+}
+
+.elite-details-buy-card .card-header {
+  border: 0;
+  padding: 1rem;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 950;
+  background: linear-gradient(135deg, #020617, #2563eb);
+}
+
+.elite-buy-price-box {
+  border-radius: 22px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  box-shadow: 0 16px 36px rgba(34, 197, 94, 0.18);
+}
+
+.elite-buy-price-box span,
+.elite-buy-price-box small {
+  display: block;
+  font-weight: 850;
+  opacity: 0.9;
+}
+
+.elite-buy-price-box strong {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 950;
+}
+
+.elite-buy-stock-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: #334155;
+  font-weight: 850;
+}
+
+.elite-qty-stepper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem;
+  border-radius: 20px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 1rem;
+}
+
+.elite-qty-stepper > span {
+  color: #334155;
+  font-weight: 900;
+}
+
+.elite-qty-stepper > div {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.elite-qty-stepper button {
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 50%;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  display: grid;
+  place-items: center;
+}
+
+.elite-qty-stepper strong {
+  min-width: 22px;
+  text-align: center;
+  color: #020617;
+  font-weight: 950;
+}
+
+.elite-delivery-check {
+  margin-bottom: 1rem;
+}
+
+.elite-delivery-check .form-label {
+  color: #334155;
+  font-weight: 900;
+}
+
+.elite-delivery-check .form-control,
+.elite-delivery-check .btn {
+  min-height: 44px;
+  font-weight: 850;
+}
+
+.elite-delivery-check .form-control {
+  border-radius: 999px 0 0 999px;
+}
+
+.elite-delivery-check .btn {
+  border-radius: 0 999px 999px 0;
+}
+
+.elite-details-cart-btn,
+.elite-details-buy-btn,
+.elite-details-wishlist-btn,
+.elite-details-review-btn {
+  width: 100%;
+  min-height: 48px;
+  border-radius: 999px;
+  font-weight: 950;
+  margin-bottom: 0.75rem;
+}
+
+.elite-details-cart-btn {
+  border: 0;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+}
+
+.elite-details-buy-btn {
+  border: 0;
+  color: #111827;
+  background: linear-gradient(135deg, #facc15, #fb923c);
+}
+
+.elite-details-buy-btn:hover {
+  color: #111827;
+}
+
+.elite-details-wishlist-btn {
+  margin-bottom: 0;
+}
+
+.elite-details-seller-card .card-body {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.elite-seller-avatar {
+  flex: 0 0 54px;
+  width: 54px;
+  height: 54px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  background: linear-gradient(135deg, #047857, #2563eb);
+  font-size: 1.35rem;
+}
+
+.elite-details-seller-card span {
+  color: #64748b;
+  font-weight: 750;
+}
+
+.elite-details-seller-card strong {
+  display: block;
+  color: #020617;
+  font-weight: 950;
+}
+
+.elite-details-seller-card small {
+  color: #64748b;
+  font-weight: 650;
+}
+
+.elite-details-trust-card .card-body {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.elite-details-trust-card .card-body div {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  border-radius: 16px;
+  padding: 0.75rem;
+  background: #f8fafc;
+  color: #334155;
+  font-weight: 850;
+}
+
+.elite-details-trust-card svg {
+  color: #2563eb;
+}
+
+/* REVIEWS */
+
+.elite-details-section-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.elite-details-section-title h3 {
+  font-weight: 950;
+  color: #020617;
+  margin-bottom: 0.25rem;
+}
+
+.elite-details-section-title p {
+  color: #64748b;
+  margin-bottom: 0;
+  font-weight: 650;
+}
+
+.elite-review-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.elite-review-card {
+  border: 0;
+  border-radius: 22px;
+  background: #f8fafc;
+}
+
+.elite-review-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.elite-review-top strong {
+  color: #020617;
+  font-weight: 950;
+}
+
+.elite-review-card p {
+  margin: 0.75rem 0 0;
+  color: #475569;
+}
+
+.elite-details-review-form-card {
+  background:
+    radial-gradient(circle at top right, rgba(250, 204, 21, 0.14), transparent 30%),
+    #ffffff;
+}
+
+.elite-details-review-form-card h3 {
+  font-weight: 950;
+  color: #020617;
+}
+
+.elite-details-review-form-card p {
+  color: #64748b;
+}
+
+.elite-details-review-form-card .form-label {
+  font-weight: 850;
+}
+
+.elite-details-review-form-card .form-control,
+.elite-details-review-form-card .form-select {
+  border-radius: 16px;
+  min-height: 45px;
+}
+
+.elite-details-review-btn {
+  border: 0;
+  margin-bottom: 0;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+}
+
+.elite-details-alert {
+  border: 0;
+  border-radius: 18px;
+  font-weight: 800;
+}
+
+/* POLICY */
+
+.elite-details-policy-section {
+  padding-top: 2rem;
+}
+
+.elite-policy-card {
+  height: 100%;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at top right, rgba(250, 204, 21, 0.18), transparent 28%),
+    linear-gradient(135deg, #020617, #2563eb);
+}
+
+.elite-policy-card .card-body {
+  padding: 1.25rem;
+}
+
+.elite-policy-card svg {
+  color: #facc15;
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.elite-policy-card h5 {
+  font-weight: 950;
+}
+
+.elite-policy-card p {
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 0;
+}
+
+/* RELATED */
+
+.elite-details-related-section {
+  padding-top: 2rem;
+}
+
+.elite-details-related-row {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(245px, 265px);
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 0.25rem 0.25rem 1rem;
+  scroll-snap-type: x mandatory;
+}
+
+.elite-details-related-item {
+  scroll-snap-align: start;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991px) {
+  .elite-details-hero,
+  .elite-details-section-title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .elite-details-hero-actions,
+  .elite-details-hero-actions .btn {
+    width: 100%;
+  }
+
+  .elite-details-floating-badge {
+    display: none;
+  }
+
+  .elite-details-buy-stack {
+    position: static;
+  }
+
+  .elite-details-main-image-wrap,
+  .elite-details-main-image {
+    min-height: 430px;
+    height: 430px;
+  }
+}
+
+@media (max-width: 576px) {
+  .elite-product-details-page {
+    padding-top: 1rem;
+  }
+
+  .elite-details-hero,
+  .elite-details-gallery-card,
+  .elite-details-info-card,
+  .elite-details-buy-card,
+  .elite-details-trust-card,
+  .elite-details-reviews-card,
+  .elite-details-review-form-card,
+  .elite-details-seller-card,
+  .elite-policy-card {
+    border-radius: 22px;
+  }
+
+  .elite-details-hero {
+    padding: 1.25rem;
+  }
+
+  .elite-details-main-image-wrap,
+  .elite-details-main-image {
+    min-height: 320px;
+    height: 320px;
+  }
+
+  .elite-details-thumb {
+    min-width: 72px;
+    width: 72px;
+    height: 72px;
+  }
+
+  .elite-details-gallery-info,
+  .elite-details-metric-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .elite-details-price-row strong {
+    font-size: 1.7rem;
+  }
+
+  .elite-details-list .list-group-item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .elite-details-list strong {
+    text-align: left;
+  }
+
+  .elite-details-related-row {
+    grid-auto-columns: minmax(225px, 240px);
+  }
+}

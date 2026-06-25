@@ -1,0 +1,483 @@
+.elite-edit-product-page {
+  padding: 1.5rem 0 3rem;
+}
+
+.elite-edit-hero {
+  border-radius: 32px;
+  padding: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at top right, rgba(250, 204, 21, 0.2), transparent 28%),
+    linear-gradient(135deg, #020617, #2563eb, #7c3aed);
+  box-shadow: 0 26px 70px rgba(37, 99, 235, 0.25);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.elite-edit-hero::before {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  right: -90px;
+  top: -100px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.elite-edit-hero > * {
+  position: relative;
+  z-index: 2;
+}
+
+.elite-edit-hero-badge {
+  border-radius: 999px;
+  padding: 0.65rem 0.95rem;
+  font-weight: 950;
+}
+
+.elite-edit-hero h1 {
+  font-size: clamp(2rem, 5vw, 3.8rem);
+  font-weight: 950;
+  margin: 0.9rem 0 0.35rem;
+}
+
+.elite-edit-hero p {
+  max-width: 760px;
+  color: rgba(255, 255, 255, 0.82);
+  margin-bottom: 0;
+}
+
+.elite-edit-hero-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.elite-edit-hero-actions .btn {
+  border-radius: 999px;
+  font-weight: 900;
+  min-height: 46px;
+}
+
+.elite-edit-stat-card {
+  border: 0;
+  border-radius: 26px;
+  color: #ffffff;
+  box-shadow: 0 20px 55px rgba(15, 23, 42, 0.14);
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+.elite-edit-stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 26px 70px rgba(15, 23, 42, 0.18);
+}
+
+.elite-edit-stat-card .card-body {
+  min-height: 130px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.elite-edit-stat-card span {
+  display: block;
+  font-weight: 850;
+  opacity: 0.85;
+}
+
+.elite-edit-stat-card h2 {
+  font-size: 1.65rem;
+  font-weight: 950;
+  margin-bottom: 0;
+}
+
+.elite-edit-stat-card svg {
+  font-size: 2.5rem;
+  opacity: 0.9;
+}
+
+.elite-edit-stat-card.price {
+  background: linear-gradient(135deg, #111827, #2563eb);
+}
+
+.elite-edit-stat-card.stock {
+  background: linear-gradient(135deg, #15803d, #22c55e);
+}
+
+.elite-edit-stat-card.discount {
+  background: linear-gradient(135deg, #dc2626, #f97316);
+}
+
+.elite-edit-stat-card.value {
+  background: linear-gradient(135deg, #7c3aed, #ec4899);
+}
+
+.elite-edit-card,
+.elite-edit-preview-card,
+.elite-edit-save-card {
+  border: 0;
+  border-radius: 28px;
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.1);
+  overflow: hidden;
+}
+
+.elite-edit-card .card-body,
+.elite-edit-preview-card .card-body,
+.elite-edit-save-card .card-body {
+  padding: 1.4rem;
+}
+
+.elite-edit-card-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.elite-edit-card-heading h3,
+.elite-edit-title {
+  font-weight: 950;
+  margin-bottom: 0.25rem;
+}
+
+.elite-edit-card-heading p {
+  color: #64748b;
+  margin-bottom: 0;
+}
+
+.elite-edit-completion {
+  min-width: 96px;
+  height: 76px;
+  border-radius: 22px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.elite-edit-completion strong {
+  display: block;
+  font-size: 1.35rem;
+  font-weight: 950;
+}
+
+.elite-edit-completion span {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.elite-edit-progress {
+  height: 10px;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.elite-edit-progress .progress-bar {
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+}
+
+.elite-edit-card .form-label {
+  font-weight: 850;
+  color: #334155;
+}
+
+.elite-edit-card .form-control,
+.elite-edit-card .form-select,
+.elite-edit-card .input-group-text {
+  min-height: 46px;
+  border-radius: 14px;
+}
+
+.elite-edit-card .input-group .input-group-text {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.elite-edit-card .input-group .form-control {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.elite-edit-switch-box {
+  min-height: 124px;
+  border-radius: 20px;
+  padding: 1rem;
+  background: #f8fafc;
+  display: grid;
+  gap: 0.55rem;
+  align-content: center;
+}
+
+.elite-edit-switch-box .form-check {
+  font-weight: 800;
+}
+
+.elite-edit-alert {
+  border: 0;
+  border-radius: 18px;
+  font-weight: 750;
+}
+
+.elite-edit-upload-box {
+  position: relative;
+  min-height: 120px;
+  border: 2px dashed #cbd5e1;
+  border-radius: 22px;
+  background: #f8fafc;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #64748b;
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+.elite-edit-upload-box:hover {
+  border-color: #2563eb;
+  background: #eef2ff;
+}
+
+.elite-edit-upload-box svg {
+  font-size: 2rem;
+  color: #2563eb;
+}
+
+.elite-edit-upload-box span {
+  font-weight: 900;
+}
+
+.elite-edit-upload-box input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.elite-edit-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1rem;
+}
+
+.elite-edit-gallery-item {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #f8fafc;
+  border: 3px solid transparent;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.elite-edit-gallery-item.active {
+  border-color: #22c55e;
+}
+
+.elite-edit-gallery-item img {
+  width: 100%;
+  height: 135px;
+  object-fit: cover;
+}
+
+.elite-edit-gallery-item .badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+
+.elite-edit-gallery-actions {
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.elite-edit-gallery-actions button {
+  flex: 1;
+  border: 0;
+  border-radius: 999px;
+  min-height: 30px;
+  font-weight: 850;
+  font-size: 0.78rem;
+  color: #111827;
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.elite-edit-gallery-actions button.danger {
+  flex: 0 0 36px;
+  color: #ffffff;
+  background: #dc2626;
+}
+
+.elite-edit-no-image {
+  min-height: 180px;
+  display: grid;
+  place-items: center;
+  color: #64748b;
+  border-radius: 22px;
+  background: #f8fafc;
+}
+
+.elite-edit-no-image svg {
+  font-size: 3rem;
+  color: #2563eb;
+}
+
+.elite-edit-preview-stack {
+  display: grid;
+  gap: 1rem;
+  position: sticky;
+  top: 150px;
+}
+
+.elite-edit-preview-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.elite-edit-preview-placeholder {
+  height: 300px;
+  display: grid;
+  place-items: center;
+  color: #64748b;
+  background: #f8fafc;
+}
+
+.elite-edit-preview-placeholder svg {
+  font-size: 3rem;
+  color: #2563eb;
+}
+
+.elite-edit-preview-card h4 {
+  font-weight: 950;
+  color: #111827;
+}
+
+.elite-preview-brand {
+  color: #64748b;
+}
+
+.elite-preview-price-row {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.9rem;
+}
+
+.elite-preview-price-row strong {
+  font-size: 1.6rem;
+  color: #2563eb;
+}
+
+.elite-preview-price-row del {
+  color: #94a3b8;
+}
+
+.elite-preview-description {
+  color: #475569;
+  white-space: pre-line;
+  max-height: 160px;
+  overflow-y: auto;
+}
+
+.elite-preview-tags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.elite-preview-lines {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.elite-preview-lines div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.7rem;
+  border-radius: 14px;
+  background: #f8fafc;
+}
+
+.elite-preview-lines span {
+  color: #475569;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.elite-preview-lines strong {
+  color: #111827;
+}
+
+.elite-edit-save-btn {
+  width: 100%;
+  min-height: 52px;
+  border: 0;
+  border-radius: 999px;
+  font-weight: 950;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+}
+
+.elite-edit-save-btn:hover {
+  background: linear-gradient(135deg, #1d4ed8, #6d28d9);
+}
+
+@media (max-width: 991px) {
+  .elite-edit-hero,
+  .elite-edit-card-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .elite-edit-hero-actions,
+  .elite-edit-hero-actions .btn {
+    width: 100%;
+  }
+
+  .elite-edit-preview-stack {
+    position: static;
+  }
+
+  .elite-edit-completion {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .elite-edit-product-page {
+    padding-top: 1rem;
+  }
+
+  .elite-edit-hero,
+  .elite-edit-stat-card,
+  .elite-edit-card,
+  .elite-edit-preview-card,
+  .elite-edit-save-card {
+    border-radius: 22px;
+  }
+
+  .elite-edit-stat-card .card-body {
+    min-height: 120px;
+  }
+
+  .elite-edit-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

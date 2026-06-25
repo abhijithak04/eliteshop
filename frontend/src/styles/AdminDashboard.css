@@ -1,0 +1,534 @@
+/* ======================================================
+   ELITESHOP ADMIN DASHBOARD
+   File: frontend/src/styles/AdminDashboard.css
+====================================================== */
+
+.elite-admin-dashboard-page {
+  min-height: 100vh;
+  padding: 1rem 0 3rem;
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.12), transparent 28%),
+    radial-gradient(circle at top right, rgba(236, 72, 153, 0.1), transparent 30%),
+    linear-gradient(180deg, #f8fafc, #eef2ff 42%, #ffffff);
+}
+
+/* HERO */
+
+.elite-admin-dashboard-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  border-radius: 34px;
+  background:
+    radial-gradient(circle at top left, rgba(236, 72, 153, 0.56), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(34, 211, 238, 0.54), transparent 30%),
+    linear-gradient(135deg, #020617, #312e81, #7c3aed, #db2777);
+  box-shadow: 0 35px 90px rgba(49, 46, 129, 0.42);
+}
+
+.elite-admin-dashboard-hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(8px);
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.elite-admin-dashboard-hero-orb-1 {
+  width: 260px;
+  height: 260px;
+  right: -80px;
+  top: -80px;
+  background: #ffffff;
+}
+
+.elite-admin-dashboard-hero-orb-2 {
+  width: 180px;
+  height: 180px;
+  left: -50px;
+  bottom: -50px;
+  background: #22d3ee;
+}
+
+.elite-admin-dashboard-hero-badge {
+  border-radius: 999px;
+  padding: 0.65rem 1rem;
+  font-weight: 900;
+}
+
+.elite-admin-dashboard-hero-title {
+  font-size: clamp(2.2rem, 5vw, 4.3rem);
+  font-weight: 950;
+  line-height: 1.02;
+  margin: 1rem 0;
+  letter-spacing: -0.06em;
+}
+
+.elite-admin-dashboard-hero-text {
+  max-width: 780px;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 1.06rem;
+  font-weight: 650;
+}
+
+.elite-admin-dashboard-hero-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.elite-admin-dashboard-hero-actions .btn {
+  border-radius: 999px;
+  font-weight: 900;
+  padding: 0.75rem 1.2rem;
+}
+
+.elite-admin-dashboard-hero-card {
+  border: 0;
+  border-radius: 28px;
+  padding: 1.5rem;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 25px 65px rgba(15, 23, 42, 0.24);
+}
+
+.elite-admin-dashboard-hero-card h4 {
+  font-weight: 950;
+  margin-top: 1rem;
+}
+
+.elite-admin-dashboard-hero-card p {
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 700;
+}
+
+.elite-admin-dashboard-hero-icon {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  border-radius: 22px;
+  color: #111827;
+  background: #fef3c7;
+  font-size: 1.8rem;
+}
+
+.elite-admin-dashboard-hero-progress-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.45rem;
+  font-weight: 900;
+}
+
+.elite-admin-dashboard-progress {
+  height: 10px;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+/* KPI */
+
+.elite-admin-dashboard-kpi-card {
+  min-height: 175px;
+  position: relative;
+  overflow: hidden;
+  border: 0;
+  border-radius: 28px;
+  color: #ffffff;
+  box-shadow: 0 24px 55px rgba(15, 23, 42, 0.18);
+}
+
+.elite-admin-dashboard-kpi-card::after {
+  content: "";
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  right: -35px;
+  top: -35px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.elite-admin-dashboard-kpi-card .card-body {
+  position: relative;
+  z-index: 2;
+  padding: 1.4rem;
+}
+
+.elite-admin-dashboard-kpi-icon {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 1rem;
+  border-radius: 20px;
+  color: #111827;
+  background: rgba(255, 255, 255, 0.85);
+  font-size: 1.65rem;
+}
+
+.elite-admin-dashboard-kpi-card p {
+  margin: 0;
+  opacity: 0.88;
+  font-weight: 800;
+}
+
+.elite-admin-dashboard-kpi-card h3 {
+  font-weight: 950;
+  margin: 0.25rem 0;
+  letter-spacing: -0.04em;
+}
+
+.elite-admin-dashboard-kpi-card span {
+  opacity: 0.86;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.gradient-revenue {
+  background: linear-gradient(135deg, #059669, #22c55e);
+}
+
+.gradient-orders {
+  background: linear-gradient(135deg, #2563eb, #06b6d4);
+}
+
+.gradient-products {
+  background: linear-gradient(135deg, #ea580c, #f59e0b);
+}
+
+.gradient-users {
+  background: linear-gradient(135deg, #7c3aed, #ec4899);
+}
+
+/* CARDS */
+
+.elite-admin-dashboard-glass-card,
+.elite-admin-dashboard-table-card,
+.elite-admin-dashboard-alert-card {
+  border: 0;
+  border-radius: 30px;
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(135deg, rgba(79, 70, 229, 0.4), rgba(236, 72, 153, 0.25)) border-box;
+  box-shadow: 0 25px 65px rgba(15, 23, 42, 0.12);
+}
+
+.elite-admin-dashboard-glass-card .card-body,
+.elite-admin-dashboard-table-card .card-body,
+.elite-admin-dashboard-alert-card .card-body {
+  padding: 1.35rem;
+}
+
+.elite-admin-dashboard-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.elite-admin-dashboard-section-header h4 {
+  font-weight: 950;
+  margin-bottom: 0.2rem;
+  color: #020617;
+  letter-spacing: -0.04em;
+}
+
+.elite-admin-dashboard-section-header p {
+  color: #64748b;
+  margin-bottom: 0;
+  font-weight: 650;
+}
+
+.elite-admin-dashboard-section-header > svg {
+  font-size: 2rem;
+  color: #2563eb;
+}
+
+.elite-admin-dashboard-metric-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.55rem;
+  color: #334155;
+  font-weight: 800;
+}
+
+.elite-admin-dashboard-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.elite-admin-dashboard-mini-grid div {
+  border-radius: 18px;
+  padding: 1rem;
+  text-align: center;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+}
+
+.elite-admin-dashboard-mini-grid h6 {
+  font-weight: 950;
+  margin-bottom: 0.2rem;
+  color: #020617;
+}
+
+.elite-admin-dashboard-mini-grid span {
+  color: #64748b;
+  font-size: 0.8rem;
+  font-weight: 750;
+}
+
+/* ACTION BUTTONS */
+
+.elite-admin-dashboard-action-btn {
+  width: 100%;
+  min-height: 96px;
+  border: 0;
+  border-radius: 26px;
+  color: #ffffff;
+  font-weight: 950;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.15);
+  transition: all 0.25s ease;
+}
+
+.elite-admin-dashboard-action-btn:hover {
+  color: #ffffff;
+}
+
+.elite-admin-dashboard-action-btn svg {
+  font-size: 1.8rem;
+}
+
+.action-products {
+  background: linear-gradient(135deg, #111827, #4f46e5);
+}
+
+.action-orders {
+  background: linear-gradient(135deg, #0f766e, #06b6d4);
+}
+
+.action-users {
+  background: linear-gradient(135deg, #16a34a, #84cc16);
+}
+
+.action-sellers {
+  background: linear-gradient(135deg, #f97316, #db2777);
+}
+
+/* BUSINESS CARD */
+
+.elite-admin-dashboard-business-card {
+  border: 0;
+  border-radius: 32px;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.18), transparent 32%),
+    linear-gradient(135deg, #020617, #0f766e, #2563eb);
+  box-shadow: 0 28px 70px rgba(37, 99, 235, 0.25);
+}
+
+.elite-admin-dashboard-business-card .card-body {
+  padding: 1.5rem;
+}
+
+.elite-admin-dashboard-business-card h3 {
+  font-weight: 950;
+  letter-spacing: -0.04em;
+}
+
+.elite-admin-dashboard-business-card p {
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 650;
+}
+
+.elite-admin-dashboard-snapshot-box {
+  padding: 1rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(10px);
+}
+
+.elite-admin-dashboard-snapshot-box svg {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.elite-admin-dashboard-snapshot-box h5 {
+  font-weight: 950;
+  margin-bottom: 0;
+}
+
+.elite-admin-dashboard-snapshot-box span {
+  opacity: 0.8;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.elite-admin-dashboard-circle-stat {
+  width: 210px;
+  height: 210px;
+  max-width: 100%;
+  margin: auto;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  border: 14px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 0 40px rgba(255, 255, 255, 0.08);
+}
+
+.elite-admin-dashboard-circle-stat span {
+  font-size: 3rem;
+  font-weight: 950;
+  line-height: 1;
+}
+
+.elite-admin-dashboard-circle-stat p {
+  margin: 0;
+  opacity: 0.8;
+  font-weight: 750;
+}
+
+/* LISTS / TABLES */
+
+.elite-admin-dashboard-alert-card {
+  background:
+    radial-gradient(circle at top right, rgba(239, 68, 68, 0.1), transparent 35%),
+    #ffffff;
+}
+
+.elite-admin-dashboard-alert-list .list-group-item,
+.elite-admin-dashboard-top-list .list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  border-color: #eef2f7;
+  padding: 0.9rem 0;
+}
+
+.elite-admin-dashboard-table {
+  margin-bottom: 0;
+}
+
+.elite-admin-dashboard-table thead th {
+  color: #64748b;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.elite-admin-dashboard-table tbody td {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  vertical-align: middle;
+}
+
+.elite-admin-dashboard-table tbody tr {
+  transition: all 0.18s ease;
+}
+
+.elite-admin-dashboard-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.elite-admin-dashboard-product-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.elite-admin-dashboard-product-cell strong {
+  display: block;
+  color: #020617;
+  font-weight: 900;
+}
+
+.elite-admin-dashboard-product-cell span {
+  display: block;
+  color: #64748b;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.elite-admin-dashboard-product-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 3px solid #eef2ff;
+}
+
+.elite-admin-dashboard-error-card {
+  max-width: 720px;
+  margin: 2rem auto;
+  border: 0;
+  border-radius: 28px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991px) {
+  .elite-admin-dashboard-hero {
+    padding: 1.8rem;
+    border-radius: 26px;
+  }
+
+  .elite-admin-dashboard-hero-title {
+    font-size: 2.4rem;
+  }
+
+  .elite-admin-dashboard-section-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  .elite-admin-dashboard-page {
+    padding-top: 0.5rem;
+  }
+
+  .elite-admin-dashboard-hero {
+    padding: 1.3rem;
+  }
+
+  .elite-admin-dashboard-hero-actions {
+    flex-direction: column;
+  }
+
+  .elite-admin-dashboard-hero-actions .btn {
+    width: 100%;
+  }
+
+  .elite-admin-dashboard-kpi-card {
+    min-height: 150px;
+  }
+
+  .elite-admin-dashboard-mini-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .elite-admin-dashboard-circle-stat {
+    width: 180px;
+    height: 180px;
+  }
+
+  .elite-admin-dashboard-action-btn {
+    min-height: 82px;
+  }
+}

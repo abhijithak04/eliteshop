@@ -1,0 +1,654 @@
+/* ======================================================
+   ELITESHOP SELLER ANALYTICS PAGE
+   File: frontend/src/styles/SellerAnalytics.css
+====================================================== */
+
+.elite-seller-analytics-page {
+  min-height: 100vh;
+  padding: 1.5rem 0 3.5rem;
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.12), transparent 28%),
+    radial-gradient(circle at top right, rgba(236, 72, 153, 0.1), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(34, 197, 94, 0.1), transparent 25%),
+    linear-gradient(180deg, #f8fafc, #eef2ff 45%, #ffffff);
+}
+
+/* HERO */
+
+.elite-analytics-hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 34px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at top right, rgba(250, 204, 21, 0.24), transparent 28%),
+    radial-gradient(circle at bottom left, rgba(236, 72, 153, 0.22), transparent 30%),
+    linear-gradient(135deg, #020617, #172554 42%, #7c3aed);
+  box-shadow: 0 28px 75px rgba(37, 99, 235, 0.28);
+  display: flex;
+  justify-content: space-between;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.elite-analytics-hero::before {
+  content: "";
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  right: -130px;
+  top: -130px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.elite-analytics-hero::after {
+  content: "";
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  left: -90px;
+  bottom: -100px;
+  border-radius: 50%;
+  background: rgba(250, 204, 21, 0.13);
+}
+
+.elite-analytics-hero > * {
+  position: relative;
+  z-index: 2;
+}
+
+.elite-analytics-hero-badge {
+  border-radius: 999px;
+  padding: 0.68rem 1rem;
+  font-weight: 950;
+}
+
+.elite-analytics-hero h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 950;
+  margin: 0.9rem 0 0.35rem;
+  letter-spacing: -0.05em;
+}
+
+.elite-analytics-hero p {
+  max-width: 800px;
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.84);
+  font-weight: 650;
+}
+
+.elite-analytics-hero-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.elite-analytics-hero-actions .btn {
+  border-radius: 999px;
+  min-height: 46px;
+  font-weight: 950;
+  padding-left: 1.1rem;
+  padding-right: 1.1rem;
+}
+
+.elite-analytics-floating-card {
+  position: absolute;
+  right: 2rem;
+  bottom: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
+  color: #111827;
+  background: linear-gradient(135deg, #facc15, #fb923c);
+  font-weight: 950;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+}
+
+/* SPIN */
+
+.elite-spin {
+  animation: elite-spin 0.8s linear infinite;
+}
+
+@keyframes elite-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* KPI */
+
+.elite-analytics-kpi-card {
+  border: 0;
+  border-radius: 28px;
+  color: #ffffff;
+  overflow: hidden;
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.15);
+  transition: all 0.22s ease;
+  position: relative;
+}
+
+.elite-analytics-kpi-card::before {
+  content: "";
+  position: absolute;
+  width: 145px;
+  height: 145px;
+  right: -55px;
+  top: -55px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.elite-analytics-kpi-card:hover {
+  box-shadow: 0 30px 78px rgba(15, 23, 42, 0.2);
+}
+
+.elite-analytics-kpi-card .card-body {
+  min-height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.elite-analytics-kpi-card span {
+  display: block;
+  font-weight: 850;
+  opacity: 0.88;
+}
+
+.elite-analytics-kpi-card h2 {
+  font-size: 1.9rem;
+  font-weight: 950;
+  margin: 0.25rem 0;
+  letter-spacing: -0.03em;
+}
+
+.elite-analytics-kpi-card p {
+  margin-bottom: 0;
+  opacity: 0.8;
+  font-weight: 700;
+}
+
+.elite-analytics-kpi-card svg {
+  font-size: 2.85rem;
+  opacity: 0.92;
+}
+
+.elite-analytics-kpi-card.revenue {
+  background: linear-gradient(135deg, #047857, #22c55e);
+}
+
+.elite-analytics-kpi-card.orders {
+  background: linear-gradient(135deg, #1d4ed8, #7c3aed);
+}
+
+.elite-analytics-kpi-card.products {
+  background: linear-gradient(135deg, #ea580c, #f59e0b);
+}
+
+.elite-analytics-kpi-card.rating {
+  background: linear-gradient(135deg, #dc2626, #ec4899);
+}
+
+/* COMMON CARDS */
+
+.elite-analytics-health-card,
+.elite-analytics-growth-card,
+.elite-analytics-table-card,
+.elite-order-summary-card {
+  border: 0;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.1);
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(14px);
+}
+
+.elite-analytics-health-card .card-body,
+.elite-analytics-growth-card .card-body,
+.elite-analytics-table-card .card-body,
+.elite-order-summary-card .card-body {
+  padding: 1.45rem;
+}
+
+.elite-card-title h4,
+.elite-table-topbar h4,
+.elite-order-summary-card h4 {
+  font-weight: 950;
+  color: #111827;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.03em;
+}
+
+.elite-card-title p,
+.elite-table-topbar p {
+  color: #64748b;
+  margin-bottom: 1rem;
+  font-weight: 650;
+}
+
+/* PROGRESS */
+
+.elite-metric-progress {
+  margin-bottom: 1rem;
+}
+
+.elite-metric-progress div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+  color: #334155;
+  font-weight: 850;
+}
+
+.elite-metric-progress .progress {
+  height: 10px;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+/* MINI INFO */
+
+.elite-mini-summary,
+.elite-analytics-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.elite-mini-summary div,
+.elite-analytics-info-grid div {
+  border-radius: 20px;
+  padding: 0.95rem;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s ease;
+}
+
+.elite-mini-summary div:hover,
+.elite-analytics-info-grid div:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+}
+
+.elite-mini-summary span,
+.elite-analytics-info-grid span {
+  display: block;
+  color: #64748b;
+  font-weight: 850;
+  font-size: 0.82rem;
+}
+
+.elite-mini-summary strong,
+.elite-analytics-info-grid strong {
+  color: #111827;
+  font-weight: 950;
+}
+
+/* GROWTH CARD */
+
+.elite-analytics-growth-card {
+  color: #ffffff;
+  background:
+    radial-gradient(circle at top right, rgba(250, 204, 21, 0.2), transparent 30%),
+    linear-gradient(135deg, #020617, #7c3aed);
+}
+
+.elite-analytics-growth-card svg {
+  font-size: 2.3rem;
+  color: #facc15;
+  margin-bottom: 1rem;
+}
+
+.elite-analytics-growth-card h4 {
+  font-weight: 950;
+}
+
+.elite-analytics-growth-card p {
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 650;
+}
+
+.elite-growth-number {
+  font-size: 3.3rem;
+  font-weight: 950;
+  line-height: 1;
+}
+
+.elite-analytics-growth-card span {
+  color: rgba(255, 255, 255, 0.72);
+  font-weight: 850;
+}
+
+.elite-analytics-growth-card .btn {
+  border-radius: 999px;
+  font-weight: 950;
+}
+
+/* QUICK ACTIONS */
+
+.elite-analytics-action-btn {
+  width: 100%;
+  min-height: 62px;
+  border: 0;
+  border-radius: 24px;
+  color: #ffffff;
+  font-weight: 950;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.14);
+  transition: all 0.22s ease;
+}
+
+.elite-analytics-action-btn:hover {
+  color: #ffffff;
+  transform: translateY(-5px);
+}
+
+.elite-analytics-action-btn.dark {
+  background: linear-gradient(135deg, #111827, #374151);
+}
+
+.elite-analytics-action-btn.blue {
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+}
+
+.elite-analytics-action-btn.orange {
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+}
+
+.elite-analytics-action-btn.green {
+  background: linear-gradient(135deg, #047857, #22c55e);
+}
+
+/* TABLE TOPBAR */
+
+.elite-table-topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.elite-table-topbar .form-select {
+  max-width: 220px;
+  min-height: 44px;
+  border-radius: 999px;
+  font-weight: 850;
+  border-color: #e5e7eb;
+}
+
+.elite-empty-alert {
+  border: 0;
+  border-radius: 18px;
+  font-weight: 800;
+}
+
+/* PRODUCT SEARCH */
+
+.elite-product-search {
+  min-height: 46px;
+  border-radius: 999px;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s ease;
+}
+
+.elite-product-search:focus-within {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+.elite-product-search svg {
+  color: #64748b;
+}
+
+.elite-product-search input {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #111827;
+  font-weight: 750;
+}
+
+/* TABLE */
+
+.elite-analytics-table {
+  margin-bottom: 0;
+}
+
+.elite-analytics-table thead th {
+  color: #475569;
+  background: #f8fafc;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1rem;
+}
+
+.elite-analytics-table tbody td {
+  vertical-align: middle;
+  padding: 1rem;
+  border-color: #eef2f7;
+}
+
+.elite-analytics-table tbody tr {
+  transition: all 0.18s ease;
+}
+
+.elite-analytics-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.elite-analytics-table td strong {
+  display: block;
+  color: #111827;
+  font-weight: 950;
+}
+
+.elite-analytics-table td small {
+  display: block;
+  color: #64748b;
+  font-weight: 700;
+}
+
+/* ORDER SUMMARY */
+
+.elite-order-summary-card {
+  color: #ffffff;
+  background:
+    radial-gradient(circle at top right, rgba(250, 204, 21, 0.2), transparent 28%),
+    linear-gradient(135deg, #020617, #1d4ed8);
+}
+
+.elite-order-summary-card h4 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.elite-summary-item {
+  min-height: 54px;
+  border-radius: 18px;
+  padding: 0.85rem;
+  margin-bottom: 0.75rem;
+  background: rgba(255, 255, 255, 0.12);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+}
+
+.elite-summary-item span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-weight: 850;
+}
+
+/* PRODUCT RANK */
+
+.elite-product-rank-list .list-group-item {
+  padding: 0.95rem 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  border-color: #eef2f7;
+}
+
+.elite-rank-product,
+.elite-table-product {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.elite-rank-number {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  font-weight: 950;
+}
+
+.elite-rank-product img,
+.elite-table-product img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border: 3px solid #eef2ff;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.elite-rank-product strong,
+.elite-table-product strong {
+  display: block;
+  color: #111827;
+  font-weight: 950;
+}
+
+.elite-rank-product small,
+.elite-table-product small {
+  display: block;
+  color: #64748b;
+  font-weight: 700;
+}
+
+.elite-rank-tags {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+  margin-top: 0.35rem;
+}
+
+.elite-rank-actions {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.elite-rank-actions .btn {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  padding: 0;
+}
+
+/* BADGES */
+
+.elite-seller-analytics-page .badge {
+  border-radius: 999px;
+  font-weight: 850;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991px) {
+  .elite-analytics-hero,
+  .elite-table-topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .elite-analytics-hero-actions,
+  .elite-analytics-hero-actions .btn,
+  .elite-table-topbar .form-select {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .elite-analytics-floating-card {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .elite-seller-analytics-page {
+    padding-top: 1rem;
+  }
+
+  .elite-analytics-hero,
+  .elite-analytics-kpi-card,
+  .elite-analytics-health-card,
+  .elite-analytics-growth-card,
+  .elite-analytics-table-card,
+  .elite-order-summary-card {
+    border-radius: 22px;
+  }
+
+  .elite-analytics-hero {
+    padding: 1.25rem;
+  }
+
+  .elite-analytics-kpi-card .card-body {
+    min-height: 130px;
+  }
+
+  .elite-analytics-health-card .card-body,
+  .elite-analytics-growth-card .card-body,
+  .elite-analytics-table-card .card-body,
+  .elite-order-summary-card .card-body {
+    padding: 1rem;
+  }
+
+  .elite-mini-summary,
+  .elite-analytics-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .elite-product-rank-list .list-group-item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .elite-rank-actions {
+    justify-content: flex-start;
+  }
+
+  .elite-rank-product {
+    align-items: flex-start;
+  }
+}

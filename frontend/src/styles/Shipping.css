@@ -1,0 +1,501 @@
+
+
+.elite-shipping-page {
+  min-height: 100vh;
+  padding: 1.5rem 0 3rem;
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.1), transparent 28%),
+    radial-gradient(circle at top right, rgba(34, 197, 94, 0.09), transparent 28%),
+    linear-gradient(180deg, #f8fafc, #eef2ff 45%, #ffffff);
+}
+
+/* HERO */
+
+.elite-shipping-hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 34px;
+  padding: 2rem;
+  margin-bottom: 1.2rem;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at top right, rgba(250, 204, 21, 0.22), transparent 28%),
+    radial-gradient(circle at bottom left, rgba(34, 197, 94, 0.2), transparent 30%),
+    linear-gradient(135deg, #020617, #172554 45%, #16a34a);
+  box-shadow: 0 28px 75px rgba(22, 163, 74, 0.24);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.elite-shipping-hero::before {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  right: -120px;
+  top: -130px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.elite-shipping-hero::after {
+  content: "";
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  left: -90px;
+  bottom: -100px;
+  border-radius: 50%;
+  background: rgba(250, 204, 21, 0.12);
+}
+
+.elite-shipping-hero > * {
+  position: relative;
+  z-index: 2;
+}
+
+.elite-shipping-hero-badge {
+  border-radius: 999px;
+  padding: 0.65rem 1rem;
+  font-weight: 950;
+}
+
+.elite-shipping-hero h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 950;
+  margin: 0.9rem 0 0.35rem;
+  letter-spacing: -0.05em;
+}
+
+.elite-shipping-hero p {
+  max-width: 760px;
+  color: rgba(255, 255, 255, 0.82);
+  margin-bottom: 0;
+}
+
+.elite-shipping-hero-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.elite-shipping-hero-actions .btn {
+  min-height: 46px;
+  border-radius: 999px;
+  font-weight: 950;
+}
+
+.elite-shipping-floating-badge {
+  position: absolute;
+  right: 2rem;
+  bottom: 1rem;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
+  color: #111827;
+  background: linear-gradient(135deg, #facc15, #fb923c);
+  font-weight: 950;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+}
+
+/* CHECKOUT STEPS */
+
+.elite-shipping-steps {
+  margin-bottom: 1.5rem;
+}
+
+.elite-shipping-steps a,
+.elite-shipping-steps span {
+  font-weight: 850;
+}
+
+/* CARDS */
+
+.elite-shipping-form-card,
+.elite-shipping-summary-card,
+.elite-shipping-preview-card,
+.elite-shipping-trust-card {
+  border: 0;
+  border-radius: 30px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.1);
+}
+
+.elite-shipping-form-card .card-body,
+.elite-shipping-summary-card .card-body,
+.elite-shipping-preview-card .card-body,
+.elite-shipping-trust-card .card-body {
+  padding: 1.35rem;
+}
+
+.elite-shipping-card-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.elite-shipping-card-heading h2 {
+  color: #020617;
+  font-weight: 950;
+  letter-spacing: -0.04em;
+  margin-bottom: 0.25rem;
+}
+
+.elite-shipping-card-heading p {
+  color: #64748b;
+  margin-bottom: 0;
+  font-weight: 650;
+}
+
+.elite-shipping-progress-box {
+  min-width: 100px;
+  height: 78px;
+  border-radius: 24px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2563eb, #16a34a);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  box-shadow: 0 14px 35px rgba(37, 99, 235, 0.2);
+}
+
+.elite-shipping-progress-box strong {
+  display: block;
+  font-size: 1.35rem;
+  font-weight: 950;
+}
+
+.elite-shipping-progress-box span {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 850;
+}
+
+.elite-shipping-progress {
+  height: 10px;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 1.4rem;
+}
+
+.elite-shipping-progress .progress-bar {
+  background: linear-gradient(135deg, #2563eb, #16a34a);
+}
+
+/* FORM */
+
+.elite-shipping-form .form-label {
+  color: #334155;
+  font-weight: 850;
+}
+
+.elite-shipping-form .form-control,
+.elite-shipping-form .form-select {
+  min-height: 46px;
+  border-radius: 16px;
+  border-color: #e5e7eb;
+  font-weight: 650;
+}
+
+.elite-shipping-form textarea.form-control {
+  min-height: 110px;
+}
+
+.elite-shipping-form .form-control:focus,
+.elite-shipping-form .form-select:focus {
+  border-color: #16a34a;
+  box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.1);
+}
+
+.elite-shipping-address-types {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.elite-shipping-address-types button {
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  padding: 0.6rem 1rem;
+  background: #f8fafc;
+  color: #334155;
+  font-weight: 900;
+  transition: all 0.2s ease;
+}
+
+.elite-shipping-address-types button:hover,
+.elite-shipping-address-types button.active {
+  color: #ffffff;
+  border-color: transparent;
+  background: linear-gradient(135deg, #2563eb, #16a34a);
+  transform: translateY(-2px);
+}
+
+.elite-shipping-form-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.elite-shipping-form-actions .btn {
+  min-height: 48px;
+  border-radius: 999px;
+  font-weight: 950;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+}
+
+.elite-shipping-submit-btn {
+  border: 0;
+  background: linear-gradient(135deg, #2563eb, #16a34a);
+  box-shadow: 0 16px 38px rgba(22, 163, 74, 0.22);
+}
+
+.elite-shipping-submit-btn:hover {
+  background: linear-gradient(135deg, #1d4ed8, #15803d);
+}
+
+/* SIDE */
+
+.elite-shipping-side-stack {
+  display: grid;
+  gap: 1rem;
+  position: sticky;
+  top: 150px;
+}
+
+.elite-shipping-summary-card .card-header {
+  border: 0;
+  padding: 1rem;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 950;
+  background: linear-gradient(135deg, #020617, #2563eb);
+}
+
+.elite-shipping-summary-line {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px dashed #cbd5e1;
+}
+
+.elite-shipping-summary-line span {
+  color: #64748b;
+  font-weight: 850;
+}
+
+.elite-shipping-summary-line strong {
+  color: #020617;
+  font-weight: 950;
+}
+
+.elite-shipping-alert {
+  border: 0;
+  border-radius: 18px;
+  margin: 1rem 0 0;
+  font-weight: 850;
+}
+
+/* PREVIEW */
+
+.elite-shipping-preview-card h4 {
+  color: #020617;
+  font-weight: 950;
+  margin-bottom: 1rem;
+}
+
+.elite-shipping-address-preview {
+  padding: 1rem;
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at top right, rgba(37, 99, 235, 0.08), transparent 30%),
+    #f8fafc;
+  border: 1px solid #e5e7eb;
+}
+
+.elite-shipping-address-preview strong {
+  display: block;
+  color: #020617;
+  font-weight: 950;
+  margin-bottom: 0.25rem;
+}
+
+.elite-shipping-address-preview span {
+  display: block;
+  color: #334155;
+  font-weight: 850;
+  margin-bottom: 0.5rem;
+}
+
+.elite-shipping-address-preview p {
+  color: #64748b;
+  font-weight: 650;
+}
+
+.elite-shipping-muted {
+  color: #64748b;
+  font-weight: 700;
+}
+
+/* TRUST */
+
+.elite-shipping-trust-card .card-body {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.elite-shipping-trust-card .card-body div {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  border-radius: 16px;
+  padding: 0.8rem;
+  background: #f8fafc;
+  color: #334155;
+  font-weight: 850;
+}
+
+.elite-shipping-trust-card svg {
+  color: #2563eb;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991px) {
+  .elite-shipping-hero,
+  .elite-shipping-card-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .elite-shipping-hero-actions,
+  .elite-shipping-hero-actions .btn {
+    width: 100%;
+  }
+
+  .elite-shipping-floating-badge {
+    display: none;
+  }
+
+  .elite-shipping-progress-box {
+    width: 100%;
+  }
+
+  .elite-shipping-side-stack {
+    position: static;
+  }
+}
+
+@media (max-width: 576px) {
+  .elite-shipping-page {
+    padding-top: 1rem;
+  }
+
+  .elite-shipping-hero,
+  .elite-shipping-form-card,
+  .elite-shipping-summary-card,
+  .elite-shipping-preview-card,
+  .elite-shipping-trust-card {
+    border-radius: 22px;
+  }
+
+  .elite-shipping-hero {
+    padding: 1.25rem;
+  }
+
+  .elite-shipping-form-card .card-body,
+  .elite-shipping-summary-card .card-body,
+  .elite-shipping-preview-card .card-body,
+  .elite-shipping-trust-card .card-body {
+    padding: 1rem;
+  }
+
+  .elite-shipping-form-actions {
+    flex-direction: column;
+  }
+
+  .elite-shipping-form-actions .btn {
+    width: 100%;
+  }
+
+  .elite-shipping-address-types button {
+    flex: 1;
+  }
+}
+.elite-shipping-address-types button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+}
+
+.elite-delivery-mode-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.elite-delivery-mode-grid button {
+  border: 1px solid #e5e7eb;
+  border-radius: 22px;
+  padding: 1rem;
+  text-align: left;
+  background:
+    radial-gradient(circle at top right, rgba(37, 99, 235, 0.08), transparent 30%),
+    #f8fafc;
+  transition: all 0.22s ease;
+}
+
+.elite-delivery-mode-grid button:hover,
+.elite-delivery-mode-grid button.active {
+  transform: translateY(-3px);
+  border-color: transparent;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2563eb, #16a34a);
+  box-shadow: 0 16px 38px rgba(22, 163, 74, 0.18);
+}
+
+.elite-delivery-mode-grid strong,
+.elite-delivery-mode-grid span,
+.elite-delivery-mode-grid small {
+  display: block;
+}
+
+.elite-delivery-mode-grid strong {
+  font-weight: 950;
+}
+
+.elite-delivery-mode-grid span {
+  color: #64748b;
+  font-weight: 750;
+  margin: 0.25rem 0;
+}
+
+.elite-delivery-mode-grid small {
+  color: #16a34a;
+  font-weight: 900;
+}
+
+.elite-delivery-mode-grid button:hover span,
+.elite-delivery-mode-grid button.active span,
+.elite-delivery-mode-grid button:hover small,
+.elite-delivery-mode-grid button.active small {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+@media (max-width: 576px) {
+  .elite-delivery-mode-grid {
+    grid-template-columns: 1fr;
+  }
+}

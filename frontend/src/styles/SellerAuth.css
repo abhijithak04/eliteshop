@@ -1,0 +1,361 @@
+.elite-seller-auth-page,
+.elite-seller-pending-page {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at top left, rgba(59, 130, 246, 0.18), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(236, 72, 153, 0.16), transparent 28%),
+    linear-gradient(135deg, #020617, #0f172a 45%, #1e3a8a);
+}
+
+.elite-seller-auth-page.register {
+  background:
+    radial-gradient(circle at top left, rgba(250, 204, 21, 0.15), transparent 24%),
+    radial-gradient(circle at bottom right, rgba(37, 99, 235, 0.2), transparent 30%),
+    linear-gradient(135deg, #020617, #111827 45%, #312e81);
+}
+
+.elite-seller-auth-info {
+  color: #ffffff;
+  position: relative;
+}
+
+.elite-seller-auth-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  border-radius: 999px;
+  padding: 0.65rem 1rem;
+  color: #111827;
+  background: #facc15;
+  font-weight: 950;
+  margin-bottom: 1rem;
+}
+
+.elite-seller-auth-info h1 {
+  font-size: clamp(2.4rem, 6vw, 5rem);
+  line-height: 0.98;
+  font-weight: 950;
+  margin-bottom: 1rem;
+}
+
+.elite-seller-auth-info p {
+  max-width: 640px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.05rem;
+}
+
+.elite-seller-feature-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  max-width: 540px;
+}
+
+.elite-seller-feature-grid div {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25rem 0.8rem;
+  padding: 1rem;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+}
+
+.elite-seller-feature-grid svg {
+  grid-row: span 2;
+  color: #facc15;
+  font-size: 1.7rem;
+}
+
+.elite-seller-feature-grid strong {
+  color: #ffffff;
+}
+
+.elite-seller-feature-grid span {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.elite-seller-auth-card {
+  border: 0;
+  border-radius: 34px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 32px 90px rgba(0, 0, 0, 0.35);
+}
+
+.elite-seller-auth-card .card-body {
+  padding: 2rem;
+}
+
+.elite-seller-auth-card.register-card .card-body {
+  padding: 1.7rem;
+}
+
+.elite-seller-form-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.elite-seller-form-icon {
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 1rem;
+  border-radius: 26px;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  font-size: 2rem;
+  box-shadow: 0 18px 40px rgba(37, 99, 235, 0.28);
+}
+
+.elite-seller-form-title h2 {
+  font-weight: 950;
+  color: #111827;
+}
+
+.elite-seller-form-title p {
+  color: #64748b;
+  margin-bottom: 0;
+}
+
+.elite-seller-input {
+  min-height: 52px;
+  border-radius: 16px;
+  padding: 0 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+}
+
+.elite-seller-input svg {
+  color: #2563eb;
+}
+
+.elite-seller-input input {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #111827;
+  font-weight: 700;
+}
+
+.elite-seller-input button {
+  border: 0;
+  background: transparent;
+  color: #64748b;
+}
+
+.elite-seller-auth-submit {
+  width: 100%;
+  min-height: 52px;
+  border: 0;
+  border-radius: 999px;
+  font-weight: 950;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+}
+
+.elite-seller-auth-submit:hover {
+  background: linear-gradient(135deg, #1d4ed8, #6d28d9);
+}
+
+.elite-seller-auth-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 1.3rem;
+  font-weight: 800;
+}
+
+.elite-seller-auth-links a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.elite-seller-auth-switch {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.8rem;
+}
+
+.elite-seller-auth-switch a {
+  color: #64748b;
+  font-size: 0.9rem;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.elite-seller-progress-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #334155;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+
+.elite-seller-auth-card .progress {
+  height: 10px;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.elite-seller-auth-card .progress-bar {
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+}
+
+.elite-seller-auth-card .form-label {
+  color: #334155;
+  font-weight: 850;
+}
+
+.elite-seller-auth-card .form-control,
+.elite-seller-auth-card .form-select {
+  min-height: 46px;
+  border-radius: 15px;
+}
+
+.elite-seller-auth-card textarea.form-control {
+  min-height: 105px;
+}
+
+.elite-seller-pending-card {
+  border: 0;
+  border-radius: 36px;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 32px 90px rgba(0, 0, 0, 0.35);
+}
+
+.elite-seller-pending-card .card-body {
+  padding: 2.4rem;
+}
+
+.elite-pending-icon {
+  width: 94px;
+  height: 94px;
+  margin: 0 auto 1rem;
+  border-radius: 34px;
+  display: grid;
+  place-items: center;
+  color: #111827;
+  background: #facc15;
+  font-size: 2.6rem;
+}
+
+.elite-seller-pending-card h1 {
+  font-weight: 950;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.elite-seller-pending-card p {
+  color: #64748b;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.elite-pending-shop-box {
+  max-width: 440px;
+  margin: 1.5rem auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+  border-radius: 22px;
+  padding: 1rem;
+  background: #f8fafc;
+}
+
+.elite-pending-shop-box svg {
+  color: #2563eb;
+  font-size: 2rem;
+}
+
+.elite-pending-shop-box span {
+  display: block;
+  color: #64748b;
+  font-weight: 800;
+}
+
+.elite-pending-shop-box strong {
+  color: #111827;
+  font-size: 1.1rem;
+}
+
+.elite-pending-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.elite-pending-steps div {
+  border-radius: 20px;
+  padding: 1rem;
+  background: #f8fafc;
+  color: #64748b;
+  font-weight: 900;
+}
+
+.elite-pending-steps svg {
+  display: block;
+  margin: 0 auto 0.5rem;
+  font-size: 1.8rem;
+}
+
+.elite-pending-steps .done {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.elite-pending-steps .active {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.elite-pending-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.elite-pending-actions .btn {
+  border-radius: 999px;
+  font-weight: 900;
+  padding: 0.75rem 1.2rem;
+}
+
+@media (max-width: 991px) {
+  .elite-seller-auth-page .min-vh-100 {
+    min-height: auto !important;
+    padding: 4rem 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .elite-seller-auth-card,
+  .elite-seller-pending-card {
+    border-radius: 24px;
+  }
+
+  .elite-seller-auth-card .card-body,
+  .elite-seller-pending-card .card-body {
+    padding: 1.3rem;
+  }
+
+  .elite-pending-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .elite-pending-actions .btn {
+    width: 100%;
+  }
+}

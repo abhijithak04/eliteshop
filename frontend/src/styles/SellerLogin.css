@@ -1,0 +1,542 @@
+
+
+.elite-seller-login-page {
+  min-height: calc(100vh - 90px);
+  padding: 1.5rem 0 3rem;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.12), transparent 28%),
+    radial-gradient(circle at top right, rgba(16, 185, 129, 0.12), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(250, 204, 21, 0.12), transparent 25%),
+    linear-gradient(180deg, #f8fafc, #eef2ff 45%, #ffffff);
+}
+
+.elite-seller-login-shell {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  border-radius: 38px;
+  overflow: hidden;
+  box-shadow: 0 34px 95px rgba(15, 23, 42, 0.18);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(22px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+/* LEFT VISUAL */
+
+.elite-seller-login-visual-col {
+  min-height: 740px;
+}
+
+.elite-seller-login-visual {
+  position: relative;
+  height: 100%;
+  min-height: 740px;
+  overflow: hidden;
+  background-image:
+    linear-gradient(
+      135deg,
+      rgba(2, 6, 23, 0.92),
+      rgba(6, 78, 59, 0.76),
+      rgba(37, 99, 235, 0.58)
+    ),
+    url("/images/seller-login.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.elite-seller-login-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top right, rgba(250, 204, 21, 0.26), transparent 28%),
+    radial-gradient(circle at bottom left, rgba(34, 197, 94, 0.2), transparent 35%);
+}
+
+.elite-seller-login-visual::after {
+  content: "";
+  position: absolute;
+  inset: auto -90px -130px auto;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.elite-seller-login-overlay {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.elite-seller-login-badge {
+  width: fit-content;
+  border-radius: 999px;
+  padding: 0.65rem 1rem;
+  font-weight: 950;
+  margin-bottom: 1rem;
+}
+
+.elite-seller-login-overlay h1 {
+  max-width: 580px;
+  font-size: clamp(2.3rem, 5vw, 4.6rem);
+  font-weight: 950;
+  letter-spacing: -0.06em;
+  line-height: 0.98;
+  margin-bottom: 1rem;
+}
+
+.elite-seller-login-overlay p {
+  max-width: 590px;
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 650;
+  line-height: 1.75;
+}
+
+.elite-seller-login-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.85rem;
+  margin-top: 1.25rem;
+  max-width: 590px;
+}
+
+.elite-seller-login-feature-card {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  padding: 1rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(16px);
+  transition: all 0.22s ease;
+}
+
+.elite-seller-login-feature-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.elite-seller-login-feature-card > svg {
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  padding: 0.75rem;
+  border-radius: 16px;
+  color: #111827;
+  background: #facc15;
+}
+
+.elite-seller-login-feature-card strong {
+  display: block;
+  font-weight: 950;
+}
+
+.elite-seller-login-feature-card span {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.85rem;
+  font-weight: 650;
+}
+
+.elite-seller-login-floating-card {
+  position: absolute;
+  left: 2rem;
+  bottom: 2rem;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: 340px;
+  padding: 1rem;
+  border-radius: 24px;
+  color: #111827;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.22);
+}
+
+.elite-seller-login-floating-card > svg {
+  flex: 0 0 50px;
+  width: 50px;
+  height: 50px;
+  padding: 0.82rem;
+  border-radius: 16px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #047857, #22c55e);
+}
+
+.elite-seller-login-floating-card strong {
+  display: block;
+  font-weight: 950;
+}
+
+.elite-seller-login-floating-card span {
+  color: #64748b;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+/* FORM */
+
+.elite-seller-login-form-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.elite-seller-login-form-wrap {
+  width: min(100%, 510px);
+}
+
+.elite-seller-login-card {
+  border: 0;
+  border-radius: 34px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.74);
+  backdrop-filter: blur(24px);
+  box-shadow: 0 28px 75px rgba(15, 23, 42, 0.14);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+.elite-seller-login-card .card-body {
+  padding: 2rem;
+}
+
+.elite-seller-login-title {
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+.elite-seller-login-icon {
+  width: 86px;
+  height: 86px;
+  border-radius: 30px;
+  margin: 0 auto 1rem;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  font-size: 2.25rem;
+  background: linear-gradient(135deg, #047857, #2563eb);
+  box-shadow: 0 18px 45px rgba(4, 120, 87, 0.25);
+}
+
+.elite-seller-login-route {
+  border-radius: 999px;
+  font-weight: 850;
+  margin-bottom: 0.8rem;
+}
+
+.elite-seller-login-title h2 {
+  color: #111827;
+  font-weight: 950;
+  letter-spacing: -0.04em;
+  margin-bottom: 0.4rem;
+}
+
+.elite-seller-login-title p {
+  color: #64748b;
+  font-weight: 650;
+  margin-bottom: 0;
+}
+
+.elite-seller-login-progress-box {
+  padding: 1rem;
+  border-radius: 22px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 1rem;
+}
+
+.elite-seller-login-progress-box > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.55rem;
+  color: #334155;
+  font-weight: 900;
+}
+
+.elite-seller-login-progress-box .progress {
+  height: 10px;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.elite-seller-login-progress-box .progress-bar {
+  background: linear-gradient(135deg, #047857, #2563eb);
+}
+
+.elite-seller-login-alert {
+  border: 0;
+  border-radius: 18px;
+  font-weight: 800;
+}
+
+.elite-seller-login-page .form-label {
+  color: #334155;
+  font-weight: 900;
+}
+
+.elite-seller-login-input {
+  min-height: 52px;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  padding: 0 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.elite-seller-login-input:focus-within {
+  border-color: #047857;
+  box-shadow: 0 0 0 4px rgba(4, 120, 87, 0.1);
+  background: #ffffff;
+}
+
+.elite-seller-login-input > svg {
+  color: #047857;
+  margin-right: 0.7rem;
+}
+
+.elite-seller-login-input input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #111827;
+  font-weight: 750;
+}
+
+.elite-seller-login-input button {
+  border: 0;
+  background: transparent;
+  color: #64748b;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: all 0.2s ease;
+}
+
+.elite-seller-login-input button:hover {
+  color: #047857;
+  background: #ecfdf5;
+}
+
+.elite-seller-login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  color: #64748b;
+  font-weight: 750;
+}
+
+.elite-seller-login-options a {
+  color: #047857;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.elite-seller-login-submit {
+  width: 100%;
+  min-height: 54px;
+  border: 0;
+  border-radius: 999px;
+  color: #ffffff;
+  font-weight: 950;
+  background: linear-gradient(135deg, #047857, #2563eb);
+  box-shadow: 0 16px 38px rgba(4, 120, 87, 0.22);
+}
+
+.elite-seller-login-submit:hover {
+  color: #ffffff;
+  background: linear-gradient(135deg, #065f46, #1d4ed8);
+  transform: translateY(-2px);
+}
+
+.elite-seller-login-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.3rem 0;
+  color: #64748b;
+  font-weight: 800;
+}
+
+.elite-seller-login-divider::before,
+.elite-seller-login-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+.elite-seller-login-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.65rem;
+}
+
+.elite-seller-login-links a {
+  min-height: 44px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #111827;
+  font-weight: 900;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.elite-seller-login-links a:hover {
+  color: #ffffff;
+  border-color: #047857;
+  background: linear-gradient(135deg, #047857, #2563eb);
+  transform: translateY(-2px);
+}
+
+.elite-seller-login-switch {
+  margin-top: 0.8rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.elite-seller-login-switch a {
+  color: #2563eb;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.elite-seller-login-secure-note {
+  margin-top: 1rem;
+  padding: 0.85rem 1rem;
+  border-radius: 18px;
+  color: #047857;
+  background: #ecfdf5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.55rem;
+  font-weight: 850;
+  text-align: center;
+}
+
+.elite-seller-login-mini-strip {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  color: #334155;
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 16px 38px rgba(15, 23, 42, 0.08);
+}
+
+.elite-seller-login-mini-strip span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 850;
+}
+
+.elite-seller-login-mini-strip svg {
+  color: #047857;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991px) {
+  .elite-seller-login-shell {
+    border-radius: 28px;
+  }
+
+  .elite-seller-login-visual-col {
+    min-height: auto;
+  }
+
+  .elite-seller-login-visual {
+    min-height: 500px;
+  }
+
+  .elite-seller-login-form-col {
+    padding: 1.25rem;
+  }
+
+  .elite-seller-login-floating-card {
+    right: 1.5rem;
+    left: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .elite-seller-login-page {
+    padding: 1rem 0 2rem;
+  }
+
+  .elite-seller-login-shell {
+    border-radius: 22px;
+  }
+
+  .elite-seller-login-visual {
+    min-height: 450px;
+  }
+
+  .elite-seller-login-overlay {
+    padding: 1.25rem;
+  }
+
+  .elite-seller-login-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .elite-seller-login-floating-card {
+    display: none;
+  }
+
+  .elite-seller-login-form-col {
+    padding: 1rem;
+  }
+
+  .elite-seller-login-card {
+    border-radius: 24px;
+  }
+
+  .elite-seller-login-card .card-body {
+    padding: 1.15rem;
+  }
+
+  .elite-seller-login-options {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .elite-seller-login-links {
+    grid-template-columns: 1fr;
+  }
+
+  .elite-seller-login-mini-strip {
+    display: grid;
+  }
+}

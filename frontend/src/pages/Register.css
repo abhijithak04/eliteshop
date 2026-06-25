@@ -1,0 +1,269 @@
+.register-page {
+  padding: 2rem 0;
+}
+
+.register-benefits-panel {
+  height: 100%;
+  min-height: 680px;
+  padding: 2rem;
+  border-radius: 28px;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at top left, rgba(59, 130, 246, 0.9), transparent 35%),
+    linear-gradient(135deg, #111827, #312e81, #7c3aed);
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+.register-benefits-panel::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  right: -80px;
+  top: -80px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.register-benefits-panel::after {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  left: -60px;
+  bottom: -60px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.register-benefits-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1.15;
+  position: relative;
+  z-index: 2;
+}
+
+.register-benefits-subtitle {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.register-benefits-grid {
+  display: grid;
+  gap: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.register-benefit-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  transition: all 0.25s ease;
+}
+
+.register-benefit-card:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.register-benefit-icon {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.18);
+  font-size: 1.2rem;
+}
+
+.register-benefit-card h6 {
+  margin-bottom: 0.2rem;
+  font-weight: 700;
+}
+
+.register-benefit-card p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.register-card {
+  border: 0;
+  border-radius: 28px;
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.15);
+  overflow: hidden;
+}
+
+.register-card .form-label {
+  font-weight: 600;
+  color: #111827;
+}
+
+.register-card .form-control,
+.register-card .form-select,
+.register-card .input-group-text {
+  border-radius: 12px;
+  min-height: 46px;
+}
+
+.register-card .input-group .form-control {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.register-card .input-group .input-group-text {
+  background: #f8fafc;
+  color: #4f46e5;
+}
+
+.register-card .btn-outline-secondary {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.register-avatar-box {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 18px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+}
+
+.register-avatar-preview {
+  width: 78px;
+  height: 78px;
+  min-width: 78px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4f46e5, #06b6d4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 2rem;
+  overflow: hidden;
+}
+
+.register-avatar-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.register-password-box {
+  padding: 1rem;
+  border-radius: 18px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+}
+
+.register-strength-bar {
+  height: 8px;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.register-requirements-list {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 0;
+}
+
+.register-requirement {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+.register-requirement svg {
+  color: #ef4444;
+}
+
+.register-requirement.valid {
+  color: #15803d;
+}
+
+.register-requirement.valid svg {
+  color: #22c55e;
+}
+
+.register-error-text {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.35rem;
+}
+
+.register-submit-btn {
+  min-height: 48px;
+  border: 0;
+  border-radius: 14px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  box-shadow: 0 14px 30px rgba(79, 70, 229, 0.35);
+  transition: all 0.25s ease;
+}
+
+.register-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(79, 70, 229, 0.45);
+  background: linear-gradient(135deg, #4338ca, #6d28d9);
+}
+
+.register-submit-btn:disabled {
+  opacity: 0.75;
+  transform: none;
+  box-shadow: none;
+}
+
+@media (max-width: 991px) {
+  .register-benefits-panel {
+    min-height: auto;
+  }
+
+  .register-benefits-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .register-page {
+    padding: 1rem 0;
+  }
+
+  .register-benefits-panel,
+  .register-card {
+    border-radius: 20px;
+  }
+
+  .register-benefits-panel {
+    padding: 1.5rem;
+  }
+
+  .register-avatar-box {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .register-requirements-list {
+    grid-template-columns: 1fr;
+  }
+}

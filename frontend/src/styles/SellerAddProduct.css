@@ -1,0 +1,816 @@
+/* ======================================================
+   ELITESHOP SELLER ADD PRODUCT PAGE
+   File: frontend/src/styles/SellerAddProduct.css
+====================================================== */
+
+.elite-seller-add-product-page {
+  min-height: 100vh;
+  padding: 1.5rem 0 3.5rem;
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.12), transparent 28%),
+    radial-gradient(circle at top right, rgba(236, 72, 153, 0.1), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(34, 197, 94, 0.1), transparent 25%),
+    linear-gradient(180deg, #f8fafc, #eef2ff 45%, #ffffff);
+}
+
+/* HERO */
+
+.elite-seller-add-header {
+  position: relative;
+  overflow: hidden;
+  border-radius: 34px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at top right, rgba(250, 204, 21, 0.24), transparent 28%),
+    radial-gradient(circle at bottom left, rgba(34, 197, 94, 0.22), transparent 30%),
+    linear-gradient(135deg, #020617, #172554 45%, #16a34a);
+  box-shadow: 0 28px 75px rgba(22, 163, 74, 0.22);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.elite-seller-add-header::before {
+  content: "";
+  position: absolute;
+  width: 330px;
+  height: 330px;
+  right: -125px;
+  top: -135px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.elite-seller-add-header::after {
+  content: "";
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  left: -90px;
+  bottom: -100px;
+  border-radius: 50%;
+  background: rgba(250, 204, 21, 0.15);
+}
+
+.elite-seller-add-header > * {
+  position: relative;
+  z-index: 2;
+}
+
+.elite-back-btn {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.65rem 1rem;
+  font-weight: 950;
+  margin-bottom: 1rem;
+  color: #111827;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.14);
+}
+
+.elite-seller-add-badge {
+  border-radius: 999px;
+  padding: 0.65rem 1rem;
+  font-weight: 950;
+  margin-bottom: 0.8rem;
+}
+
+.elite-seller-add-header h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 950;
+  margin-bottom: 0.45rem;
+  letter-spacing: -0.05em;
+}
+
+.elite-seller-add-header p {
+  max-width: 790px;
+  color: rgba(255, 255, 255, 0.84);
+  margin-bottom: 0;
+  font-weight: 650;
+  font-size: 1.02rem;
+}
+
+.elite-seller-header-badge {
+  min-width: max-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.85rem 1.1rem;
+  border-radius: 999px;
+  color: #111827;
+  background: linear-gradient(135deg, #facc15, #fb923c);
+  font-weight: 950;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+}
+
+/* STATS */
+
+.elite-add-stat-card {
+  border: 0;
+  border-radius: 28px;
+  overflow: hidden;
+  color: #ffffff;
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.15);
+  transition: all 0.22s ease;
+  position: relative;
+}
+
+.elite-add-stat-card::before {
+  content: "";
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  right: -45px;
+  top: -45px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.elite-add-stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 80px rgba(15, 23, 42, 0.2);
+}
+
+.elite-add-stat-card .card-body {
+  min-height: 142px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.elite-add-stat-card span {
+  display: block;
+  font-weight: 850;
+  opacity: 0.88;
+}
+
+.elite-add-stat-card h2 {
+  font-size: 1.65rem;
+  font-weight: 950;
+  margin: 0.25rem 0;
+}
+
+.elite-add-stat-card p {
+  margin: 0;
+  opacity: 0.78;
+  font-weight: 700;
+}
+
+.elite-add-stat-card svg {
+  font-size: 2.7rem;
+  opacity: 0.92;
+}
+
+.elite-add-stat-card.price {
+  background: linear-gradient(135deg, #1d4ed8, #7c3aed);
+}
+
+.elite-add-stat-card.stock {
+  background: linear-gradient(135deg, #047857, #22c55e);
+}
+
+.elite-add-stat-card.discount {
+  background: linear-gradient(135deg, #ea580c, #f59e0b);
+}
+
+.elite-add-stat-card.value {
+  background: linear-gradient(135deg, #dc2626, #ec4899);
+}
+
+/* CARDS */
+
+.elite-add-product-card,
+.elite-preview-card,
+.elite-seller-tips-card,
+.elite-stock-info-card {
+  border: 0;
+  border-radius: 30px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.1);
+}
+
+.elite-add-product-card .card-body,
+.elite-preview-card .card-body,
+.elite-seller-tips-card .card-body,
+.elite-stock-info-card .card-body {
+  padding: 1.45rem;
+}
+
+.elite-add-card-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.elite-add-card-heading h3 {
+  color: #111827;
+  font-weight: 950;
+  margin-bottom: 0.25rem;
+}
+
+.elite-add-card-heading p {
+  color: #64748b;
+  margin-bottom: 0;
+  font-weight: 650;
+}
+
+.elite-add-completion {
+  min-width: 104px;
+  height: 78px;
+  border-radius: 24px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2563eb, #16a34a);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  box-shadow: 0 14px 35px rgba(37, 99, 235, 0.2);
+}
+
+.elite-add-completion strong {
+  display: block;
+  font-size: 1.35rem;
+  font-weight: 950;
+}
+
+.elite-add-completion span {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.elite-add-progress {
+  height: 10px;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.elite-add-progress .progress-bar {
+  background: linear-gradient(135deg, #2563eb, #16a34a);
+}
+
+/* FORM */
+
+.elite-form-section-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 1.1rem;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  font-weight: 950;
+  box-shadow: 0 14px 34px rgba(37, 99, 235, 0.2);
+}
+
+.elite-add-product-card .form-label {
+  color: #334155;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+
+.elite-add-product-card .form-control,
+.elite-add-product-card .form-select {
+  min-height: 48px;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  color: #111827;
+  font-weight: 750;
+  background: #ffffff;
+  box-shadow: none;
+  transition: all 0.2s ease;
+}
+
+.elite-add-product-card textarea.form-control {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.elite-add-product-card .form-control:focus,
+.elite-add-product-card .form-select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+.elite-add-product-card .invalid-feedback {
+  font-weight: 800;
+}
+
+/* UPLOAD */
+
+.elite-upload-box {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  min-height: 230px;
+  padding: 1.4rem;
+  border-radius: 28px;
+  border: 2px dashed #93c5fd;
+  background:
+    radial-gradient(circle at top right, rgba(37, 99, 235, 0.08), transparent 35%),
+    radial-gradient(circle at bottom left, rgba(34, 197, 94, 0.08), transparent 35%),
+    #f8fafc;
+  transition: all 0.25s ease;
+}
+
+.elite-upload-box:hover {
+  transform: translateY(-4px);
+  border-color: #2563eb;
+  background: #ffffff;
+  box-shadow: 0 20px 55px rgba(37, 99, 235, 0.12);
+}
+
+.elite-upload-box > svg {
+  font-size: 3.3rem;
+  color: #2563eb;
+  margin-bottom: 0.8rem;
+}
+
+.elite-upload-box h5 {
+  color: #020617;
+  font-weight: 950;
+  margin-bottom: 0.4rem;
+}
+
+.elite-upload-box p {
+  max-width: 500px;
+  color: #64748b;
+  font-weight: 650;
+  margin-bottom: 1rem;
+}
+
+.elite-upload-box .form-control {
+  max-width: 520px;
+  min-height: 46px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.elite-upload-progress {
+  padding: 1rem;
+  border-radius: 20px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+}
+
+.elite-upload-progress > div {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.7rem;
+}
+
+/* IMAGE PREVIEW */
+
+.elite-image-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 26px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+}
+
+.elite-preview-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  border: 3px solid transparent;
+  background: #ffffff;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.09);
+  transition: all 0.22s ease;
+}
+
+.elite-preview-image:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 24px 55px rgba(15, 23, 42, 0.14);
+}
+
+.elite-preview-image.active {
+  border-color: #22c55e;
+}
+
+.elite-preview-image img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+}
+
+.elite-preview-image .badge {
+  position: absolute;
+  top: 0.7rem;
+  left: 0.7rem;
+  border-radius: 999px;
+  font-weight: 950;
+}
+
+.elite-preview-actions {
+  position: absolute;
+  inset-inline: 0.65rem;
+  bottom: 0.65rem;
+  display: flex;
+  gap: 0.45rem;
+}
+
+.elite-preview-actions button {
+  flex: 1;
+  border: 0;
+  min-height: 34px;
+  border-radius: 999px;
+  color: #ffffff;
+  background: rgba(15, 23, 42, 0.84);
+  backdrop-filter: blur(10px);
+  font-weight: 900;
+  transition: all 0.2s ease;
+}
+
+.elite-preview-actions button:hover {
+  transform: translateY(-2px);
+  background: #2563eb;
+}
+
+.elite-preview-actions button.danger {
+  flex: 0 0 42px;
+  background: rgba(220, 38, 38, 0.9);
+}
+
+/* PRICE / SWITCHES */
+
+.elite-discount-preview {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  color: #065f46;
+  background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+  border: 1px solid #86efac;
+  font-weight: 950;
+}
+
+.elite-product-checks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  padding: 1rem;
+  border-radius: 22px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+}
+
+.elite-product-checks .form-check {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.8rem 1rem 0.8rem 3rem;
+  border-radius: 999px;
+  color: #334155;
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+  font-weight: 900;
+}
+
+.elite-info-alert {
+  border: 0;
+  border-radius: 20px;
+  color: #1e3a8a;
+  background:
+    radial-gradient(circle at top right, rgba(37, 99, 235, 0.08), transparent 32%),
+    #dbeafe;
+  font-weight: 750;
+}
+
+/* ACTIONS */
+
+.elite-submit-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1.3rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.elite-submit-actions .btn {
+  min-height: 48px;
+  border-radius: 999px;
+  padding-inline: 1.4rem;
+  font-weight: 950;
+}
+
+.elite-submit-product-btn {
+  border: 0;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  box-shadow: 0 16px 38px rgba(37, 99, 235, 0.22);
+}
+
+.elite-submit-product-btn:hover {
+  color: #ffffff;
+  background: linear-gradient(135deg, #1d4ed8, #6d28d9);
+  transform: translateY(-2px);
+}
+
+/* RIGHT PREVIEW */
+
+.elite-product-live-preview {
+  position: sticky;
+  top: 100px;
+  display: grid;
+  gap: 1rem;
+}
+
+.elite-preview-card {
+  background:
+    radial-gradient(circle at top right, rgba(37, 99, 235, 0.08), transparent 32%),
+    #ffffff;
+}
+
+.elite-preview-card h4,
+.elite-seller-tips-card h5 {
+  color: #020617;
+  font-weight: 950;
+  margin-bottom: 1rem;
+}
+
+.elite-preview-product-box {
+  overflow: hidden;
+  border-radius: 26px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
+}
+
+.elite-preview-product-box img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  display: block;
+}
+
+.elite-preview-placeholder {
+  height: 270px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #64748b;
+  background:
+    radial-gradient(circle at top, rgba(37, 99, 235, 0.08), transparent 35%),
+    #eef2ff;
+}
+
+.elite-preview-placeholder svg {
+  font-size: 3rem;
+  color: #2563eb;
+  margin-bottom: 0.7rem;
+}
+
+.elite-preview-placeholder span {
+  display: block;
+  font-weight: 900;
+}
+
+.elite-preview-product-body {
+  padding: 1rem;
+}
+
+.elite-preview-product-body h5 {
+  color: #020617;
+  font-weight: 950;
+  margin-bottom: 0.25rem;
+}
+
+.elite-preview-product-body p {
+  color: #64748b;
+  margin-bottom: 0.65rem;
+  font-weight: 700;
+}
+
+.elite-preview-price {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.elite-preview-price strong {
+  color: #2563eb;
+  font-size: 1.45rem;
+  font-weight: 950;
+}
+
+.elite-preview-price del {
+  color: #94a3b8;
+  font-weight: 800;
+}
+
+.elite-preview-badges {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.elite-preview-lines {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.elite-preview-lines div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.75rem;
+  border-radius: 16px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+}
+
+.elite-preview-lines span {
+  color: #475569;
+  font-weight: 850;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.elite-preview-lines strong {
+  color: #111827;
+  font-weight: 950;
+}
+
+/* TIPS */
+
+.elite-seller-tips-card {
+  background:
+    radial-gradient(circle at top right, rgba(250, 204, 21, 0.1), transparent 32%),
+    #ffffff;
+}
+
+.elite-seller-tips-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.elite-seller-tips-card li {
+  color: #475569;
+  font-weight: 750;
+  margin-bottom: 0.55rem;
+}
+
+.elite-stock-info-card {
+  color: #ffffff;
+  background:
+    radial-gradient(circle at top right, rgba(250, 204, 21, 0.2), transparent 30%),
+    linear-gradient(135deg, #020617, #0f766e);
+}
+
+.elite-stock-info-card .card-body {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.elite-stock-info-card svg {
+  flex: 0 0 54px;
+  width: 54px;
+  height: 54px;
+  padding: 0.85rem;
+  border-radius: 18px;
+  color: #111827;
+  background: #facc15;
+}
+
+.elite-stock-info-card h5 {
+  font-weight: 950;
+  margin-bottom: 0.25rem;
+}
+
+.elite-stock-info-card p {
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 650;
+  margin-bottom: 0;
+}
+
+/* PROGRESS */
+
+.elite-seller-add-product-page .progress {
+  height: 12px;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.elite-seller-add-product-page .progress-bar {
+  font-weight: 900;
+  background: linear-gradient(135deg, #2563eb, #22c55e);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991px) {
+  .elite-seller-add-header,
+  .elite-add-card-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .elite-seller-header-badge {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .elite-product-live-preview {
+    position: static;
+  }
+
+  .elite-submit-actions {
+    justify-content: stretch;
+  }
+
+  .elite-submit-actions .btn {
+    flex: 1;
+  }
+
+  .elite-add-completion {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .elite-seller-add-product-page {
+    padding-top: 1rem;
+  }
+
+  .elite-seller-add-header,
+  .elite-add-product-card,
+  .elite-preview-card,
+  .elite-seller-tips-card,
+  .elite-stock-info-card,
+  .elite-add-stat-card {
+    border-radius: 22px;
+  }
+
+  .elite-seller-add-header {
+    padding: 1.25rem;
+  }
+
+  .elite-add-product-card .card-body,
+  .elite-preview-card .card-body,
+  .elite-seller-tips-card .card-body,
+  .elite-stock-info-card .card-body {
+    padding: 1rem;
+  }
+
+  .elite-upload-box {
+    min-height: 210px;
+    border-radius: 22px;
+  }
+
+  .elite-image-preview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .elite-preview-image img {
+    height: 210px;
+  }
+
+  .elite-product-checks {
+    display: grid;
+  }
+
+  .elite-product-checks .form-check {
+    border-radius: 18px;
+  }
+
+  .elite-submit-actions {
+    flex-direction: column;
+  }
+
+  .elite-submit-actions .btn {
+    width: 100%;
+  }
+
+  .elite-preview-product-box img,
+  .elite-preview-placeholder {
+    height: 220px;
+  }
+
+  .elite-stock-info-card .card-body {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

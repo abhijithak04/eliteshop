@@ -1,0 +1,567 @@
+/* ======================================================
+   ELITESHOP SELLER PENDING PAGE
+   File: frontend/src/styles/SellerPending.css
+====================================================== */
+
+.elite-seller-pending-page {
+  min-height: calc(100vh - 90px);
+  padding: 1.5rem 0 3rem;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.12), transparent 28%),
+    radial-gradient(circle at top right, rgba(250, 204, 21, 0.13), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(34, 197, 94, 0.1), transparent 25%),
+    linear-gradient(180deg, #f8fafc, #eef2ff 45%, #ffffff);
+}
+
+.elite-seller-pending-shell {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  border-radius: 38px;
+  overflow: hidden;
+  box-shadow: 0 34px 95px rgba(15, 23, 42, 0.18);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(22px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+/* LEFT VISUAL */
+
+.elite-seller-pending-visual-col {
+  min-height: 720px;
+}
+
+.elite-seller-pending-visual {
+  position: relative;
+  height: 100%;
+  min-height: 720px;
+  overflow: hidden;
+  background-image:
+    linear-gradient(
+      135deg,
+      rgba(2, 6, 23, 0.94),
+      rgba(120, 53, 15, 0.75),
+      rgba(37, 99, 235, 0.58)
+    ),
+    url("/images/seller-pending.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.elite-seller-pending-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top right, rgba(250, 204, 21, 0.28), transparent 28%),
+    radial-gradient(circle at bottom left, rgba(34, 197, 94, 0.18), transparent 35%);
+}
+
+.elite-seller-pending-visual::after {
+  content: "";
+  position: absolute;
+  inset: auto -90px -130px auto;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.elite-seller-pending-overlay {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.elite-seller-pending-badge {
+  width: fit-content;
+  border-radius: 999px;
+  padding: 0.65rem 1rem;
+  font-weight: 950;
+  margin-bottom: 1rem;
+}
+
+.elite-seller-pending-overlay h1 {
+  max-width: 580px;
+  font-size: clamp(2.3rem, 5vw, 4.4rem);
+  font-weight: 950;
+  letter-spacing: -0.06em;
+  line-height: 0.98;
+  margin-bottom: 1rem;
+}
+
+.elite-seller-pending-overlay p {
+  max-width: 590px;
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 650;
+  line-height: 1.75;
+}
+
+.elite-seller-pending-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.85rem;
+  margin-top: 1.25rem;
+  max-width: 590px;
+}
+
+.elite-seller-pending-feature-card {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  padding: 1rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(16px);
+  transition: all 0.22s ease;
+}
+
+.elite-seller-pending-feature-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.elite-seller-pending-feature-card > svg {
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  padding: 0.75rem;
+  border-radius: 16px;
+  color: #111827;
+  background: #facc15;
+}
+
+.elite-seller-pending-feature-card strong {
+  display: block;
+  font-weight: 950;
+}
+
+.elite-seller-pending-feature-card span {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.85rem;
+  font-weight: 650;
+}
+
+.elite-seller-pending-floating-card {
+  position: absolute;
+  left: 2rem;
+  bottom: 2rem;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: 340px;
+  padding: 1rem;
+  border-radius: 24px;
+  color: #111827;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.22);
+}
+
+.elite-seller-pending-floating-card > svg {
+  flex: 0 0 50px;
+  width: 50px;
+  height: 50px;
+  padding: 0.82rem;
+  border-radius: 16px;
+  color: #111827;
+  background: linear-gradient(135deg, #facc15, #fb923c);
+}
+
+.elite-seller-pending-floating-card strong {
+  display: block;
+  font-weight: 950;
+}
+
+.elite-seller-pending-floating-card span {
+  color: #64748b;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+/* CONTENT */
+
+.elite-seller-pending-content-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.elite-seller-pending-content-wrap {
+  width: min(100%, 680px);
+}
+
+.elite-seller-pending-card {
+  border: 0;
+  border-radius: 34px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.74);
+  backdrop-filter: blur(24px);
+  box-shadow: 0 28px 75px rgba(15, 23, 42, 0.14);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+.elite-seller-pending-card .card-body {
+  padding: 2rem;
+}
+
+.elite-seller-pending-top {
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+.elite-pending-icon {
+  width: 92px;
+  height: 92px;
+  border-radius: 32px;
+  margin: 0 auto 1rem;
+  display: grid;
+  place-items: center;
+  color: #111827;
+  font-size: 2.35rem;
+  background: linear-gradient(135deg, #facc15, #fb923c);
+  box-shadow: 0 18px 45px rgba(250, 204, 21, 0.26);
+}
+
+.elite-pending-status-badge {
+  border-radius: 999px;
+  padding: 0.65rem 1rem;
+  font-weight: 950;
+  margin-bottom: 0.8rem;
+}
+
+.elite-seller-pending-top h1 {
+  color: #111827;
+  font-weight: 950;
+  letter-spacing: -0.05em;
+  margin-bottom: 0.55rem;
+}
+
+.elite-seller-pending-top p {
+  color: #64748b;
+  font-weight: 650;
+  margin: 0 auto;
+  max-width: 560px;
+}
+
+.elite-pending-progress-box {
+  padding: 1rem;
+  border-radius: 22px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 1rem;
+}
+
+.elite-pending-progress-box > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: #334155;
+  font-weight: 900;
+  margin-bottom: 0.55rem;
+}
+
+.elite-pending-progress-box .progress {
+  height: 10px;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.elite-pending-progress-box .progress-bar {
+  background: linear-gradient(135deg, #facc15, #fb923c);
+}
+
+.elite-pending-info-alert {
+  border: 0;
+  border-radius: 18px;
+  font-weight: 800;
+}
+
+.elite-pending-shop-box {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 1rem;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at top right, rgba(250, 204, 21, 0.16), transparent 30%),
+    #f8fafc;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 1rem;
+}
+
+.elite-pending-shop-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  background: linear-gradient(135deg, #047857, #2563eb);
+  font-size: 1.5rem;
+}
+
+.elite-pending-shop-box div:not(.elite-pending-shop-icon) {
+  flex: 1;
+  min-width: 0;
+}
+
+.elite-pending-shop-box span,
+.elite-pending-detail-box span {
+  display: block;
+  color: #64748b;
+  font-weight: 750;
+  font-size: 0.85rem;
+}
+
+.elite-pending-shop-box strong,
+.elite-pending-detail-box strong {
+  display: block;
+  color: #111827;
+  font-weight: 950;
+  word-break: break-word;
+}
+
+.elite-pending-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.elite-pending-detail-box {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: 22px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+}
+
+.elite-pending-detail-box > svg {
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  padding: 0.75rem;
+  border-radius: 16px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+}
+
+/* STEPS */
+
+.elite-pending-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.elite-pending-steps > div {
+  position: relative;
+  padding: 1rem;
+  border-radius: 22px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.elite-pending-steps > div:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 38px rgba(15, 23, 42, 0.08);
+}
+
+.elite-pending-steps svg {
+  width: 48px;
+  height: 48px;
+  padding: 0.8rem;
+  border-radius: 16px;
+  margin-bottom: 0.65rem;
+  color: #ffffff;
+  background: #94a3b8;
+}
+
+.elite-pending-steps .done svg {
+  background: linear-gradient(135deg, #047857, #22c55e);
+}
+
+.elite-pending-steps .active svg {
+  color: #111827;
+  background: linear-gradient(135deg, #facc15, #fb923c);
+  animation: elitePendingPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes elitePendingPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(250, 204, 21, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 0 10px rgba(250, 204, 21, 0);
+  }
+}
+
+.elite-pending-steps strong {
+  display: block;
+  color: #111827;
+  font-weight: 950;
+}
+
+.elite-pending-steps span {
+  display: block;
+  color: #64748b;
+  font-weight: 650;
+  font-size: 0.85rem;
+}
+
+/* ACTIONS */
+
+.elite-pending-actions {
+  display: flex;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.elite-pending-primary-btn {
+  min-height: 48px;
+  border: 0;
+  border-radius: 999px;
+  color: #111827;
+  font-weight: 950;
+  padding-inline: 1.15rem;
+  background: linear-gradient(135deg, #facc15, #fb923c);
+  box-shadow: 0 16px 38px rgba(250, 204, 21, 0.22);
+}
+
+.elite-pending-primary-btn:hover {
+  color: #111827;
+  background: linear-gradient(135deg, #eab308, #f97316);
+  transform: translateY(-2px);
+}
+
+.elite-pending-pill-btn {
+  min-height: 48px;
+  border-radius: 999px;
+  font-weight: 950;
+  padding-inline: 1.15rem;
+}
+
+.elite-seller-pending-mini-strip {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  color: #334155;
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 16px 38px rgba(15, 23, 42, 0.08);
+}
+
+.elite-seller-pending-mini-strip span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 850;
+}
+
+.elite-seller-pending-mini-strip svg {
+  color: #f59e0b;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991px) {
+  .elite-seller-pending-shell {
+    border-radius: 28px;
+  }
+
+  .elite-seller-pending-visual-col {
+    min-height: auto;
+  }
+
+  .elite-seller-pending-visual {
+    min-height: 500px;
+  }
+
+  .elite-seller-pending-content-col {
+    padding: 1.25rem;
+  }
+
+  .elite-seller-pending-floating-card {
+    right: 1.5rem;
+    left: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .elite-seller-pending-page {
+    padding: 1rem 0 2rem;
+  }
+
+  .elite-seller-pending-shell {
+    border-radius: 22px;
+  }
+
+  .elite-seller-pending-visual {
+    min-height: 450px;
+  }
+
+  .elite-seller-pending-overlay {
+    padding: 1.25rem;
+  }
+
+  .elite-seller-pending-feature-grid,
+  .elite-pending-details-grid,
+  .elite-pending-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .elite-seller-pending-floating-card {
+    display: none;
+  }
+
+  .elite-seller-pending-content-col {
+    padding: 1rem;
+  }
+
+  .elite-seller-pending-card {
+    border-radius: 24px;
+  }
+
+  .elite-seller-pending-card .card-body {
+    padding: 1.15rem;
+  }
+
+  .elite-pending-shop-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .elite-pending-actions {
+    display: grid;
+  }
+
+  .elite-pending-actions .btn {
+    width: 100%;
+  }
+
+  .elite-seller-pending-mini-strip {
+    display: grid;
+  }
+}

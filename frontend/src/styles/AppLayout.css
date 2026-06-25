@@ -1,0 +1,329 @@
+
+
+:root {
+  --elite-dark: #020617;
+  --elite-blue: #2563eb;
+  --elite-purple: #7c3aed;
+  --elite-pink: #ec4899;
+  --elite-green: #22c55e;
+  --elite-yellow: #facc15;
+  --elite-orange: #f97316;
+  --elite-red: #dc2626;
+  --elite-muted: #64748b;
+  --elite-card: rgba(255, 255, 255, 0.92);
+  --elite-border: rgba(226, 232, 240, 0.85);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: #111827;
+  background: #f8fafc;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.app-wrapper {
+  isolation: isolate;
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.11), transparent 28%),
+    radial-gradient(circle at top right, rgba(236, 72, 153, 0.08), transparent 30%),
+    linear-gradient(180deg, #f8fafc, #eef2ff 42%, #ffffff);
+}
+
+.elite-app-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bg-orb {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(24px);
+  opacity: 0.45;
+  animation: eliteFloatOrb 9s ease-in-out infinite;
+}
+
+.orb-1 {
+  width: 360px;
+  height: 360px;
+  top: -120px;
+  left: -120px;
+  background: rgba(37, 99, 235, 0.32);
+}
+
+.orb-2 {
+  width: 420px;
+  height: 420px;
+  top: 18%;
+  right: -170px;
+  background: rgba(236, 72, 153, 0.22);
+  animation-delay: 1.5s;
+}
+
+.orb-3 {
+  width: 320px;
+  height: 320px;
+  bottom: -140px;
+  left: 35%;
+  background: rgba(34, 197, 94, 0.2);
+  animation-delay: 3s;
+}
+
+.bg-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.18;
+  background-image:
+    linear-gradient(rgba(15, 23, 42, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.08) 1px, transparent 1px);
+  background-size: 38px 38px;
+  mask-image: linear-gradient(to bottom, black, transparent 80%);
+}
+
+.bg-glow-line {
+  position: absolute;
+  top: 0;
+  left: 15%;
+  width: 70%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(37, 99, 235, 0.65),
+    rgba(236, 72, 153, 0.55),
+    transparent
+  );
+  box-shadow: 0 0 34px rgba(37, 99, 235, 0.4);
+}
+
+@keyframes eliteFloatOrb {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(18px, -18px, 0) scale(1.05);
+  }
+}
+
+.main-content {
+  z-index: 1;
+  padding-top: 0;
+}
+
+.app-container {
+  position: relative;
+  z-index: 2;
+}
+
+.auth-main-content {
+  display: flex;
+  align-items: stretch;
+}
+
+.auth-container {
+  width: 100%;
+  padding: 1.5rem 1rem 3rem;
+}
+
+.dashboard-main-content {
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.08), transparent 35%),
+    #f8fafc;
+}
+
+.dashboard-container {
+  padding: 1.25rem;
+}
+
+.page-transition {
+  min-height: 65vh;
+  position: relative;
+}
+
+.elite-route-loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 50;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.08);
+}
+
+.elite-route-loader span {
+  display: block;
+  width: 45%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(
+    90deg,
+    var(--elite-blue),
+    var(--elite-purple),
+    var(--elite-pink)
+  );
+  animation: eliteRouteLoad 0.85s ease-in-out infinite;
+}
+
+@keyframes eliteRouteLoad {
+  0% {
+    transform: translateX(-110%);
+  }
+
+  100% {
+    transform: translateX(240%);
+  }
+}
+
+.elite-offline-banner {
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+}
+
+/* PREMIUM TOAST */
+
+.premium-toast {
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  background:
+    radial-gradient(circle at top right, rgba(250, 204, 21, 0.16), transparent 28%),
+    linear-gradient(135deg, #020617, #111827) !important;
+  box-shadow: 0 20px 55px rgba(15, 23, 42, 0.35) !important;
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.premium-toast-body {
+  color: #f8fafc !important;
+  font-weight: 750;
+}
+
+.premium-toast-progress {
+  background: linear-gradient(
+    90deg,
+    var(--elite-yellow),
+    var(--elite-orange),
+    var(--elite-pink)
+  ) !important;
+}
+
+/* GLOBAL UI TOUCH FEEL */
+
+.card,
+.btn,
+.form-control,
+.form-select,
+.dropdown-menu,
+.modal-content {
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease,
+    background-color 0.18s ease;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--elite-blue);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e5e7eb;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--elite-blue), var(--elite-purple));
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--elite-purple), var(--elite-pink));
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991px) {
+  .dashboard-container {
+    padding: 1rem;
+  }
+
+  .auth-container {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .app-container {
+    padding-left: 0.85rem !important;
+    padding-right: 0.85rem !important;
+  }
+
+  .dashboard-container {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+
+  .orb-1 {
+    width: 260px;
+    height: 260px;
+  }
+
+  .orb-2 {
+    width: 280px;
+    height: 280px;
+  }
+
+  .orb-3 {
+    width: 240px;
+    height: 240px;
+  }
+
+  .premium-toast {
+    border-radius: 16px !important;
+  }
+}
