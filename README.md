@@ -1,14 +1,16 @@
 # EliteShop – Full Stack MERN Ecommerce Platform
 
-EliteShop is a full-stack ecommerce web application built with the MERN stack. It includes customer, seller, and admin workflows with product browsing, cart, wishlist, checkout, order management, seller approval, Cloudinary image uploads, Razorpay payment integration, and role-based dashboards.
+EliteShop is a full-stack ecommerce marketplace platform built using the MERN stack. It includes customer, seller, and admin workflows with product browsing, category-based shopping, wishlist, cart, checkout, order management, seller approval, product management, Cloudinary image uploads, Razorpay payment integration, and role-based dashboards.
 
-This project was built as a real-world ecommerce platform to demonstrate full-stack development skills using React, Node.js, Express.js, MongoDB, JWT authentication, Cloudinary, and Razorpay.
+This project was developed to simulate a real-world ecommerce platform and demonstrate practical full-stack development skills using React.js, Node.js, Express.js, MongoDB, JWT authentication, Cloudinary, and Razorpay.
 
 ---
 
 ## Live Demo
 
->
+The project is currently not deployed online.
+
+Demo videos are available below.
 
 ---
 
@@ -24,75 +26,105 @@ A walkthrough of the main EliteShop workflows including customer, seller, and ad
 
 ---
 
-## Screenshots
+
+
+### Screenshots
 
 ### Homepage
 
-![EliteShop Homepage](assets/screenshots/home.jpg)
+![EliteShop Homepage](assets/screenshots/admin-homepage.jpg)
 
-### Product Page
+### Product Listing and Homepage Sections
 
-![Product Page](assets/screenshots/product.jpg)
+![Product Listing and Homepage Sections](assets/screenshots/admin-manage-product.jpg)
 
-### Cart Page 1
+### Product Management View
 
-![Cart Page 1](assets/screenshots/cart-page-1.jpg)
+![Product Management View](assets/screenshots/admin-manage-product-1.jpg)
 
-### Cart Page 2
+### Cart Page
 
-![Cart Page 2](assets/screenshots/cart-page-2.jpg)
+![Cart Page](assets/screenshots/user-cartpage.jpg)
+
+### Shopping Cart Overview
+
+![Shopping Cart Overview](assets/screenshots/user-cart-1.jpg)
+
+### Shipping Address Page
+
+![Shipping Address Page](assets/screenshots/user-ordering%20page.jpg)
+
+### Delivery Information Form
+
+![Delivery Information Form](assets/screenshots/user-ordering%20page%201.jpg)
+
+### Delivery Mode and Address Details
+
+![Delivery Mode and Address Details](assets/screenshots/user-ordering%20page%202.jpg)
+
+### Payment Selection Page
+
+![Payment Selection Page](assets/screenshots/user-payement-page.jpg)
+
+### Payment Summary Page
+
+![Payment Summary Page](assets/screenshots/user-payement-page1.jpg)
+
+### Razorpay Payment Gateway
+
+![Razorpay Payment Gateway](assets/screenshots/user-razorpay.jpg)
 
 ### User Dashboard
 
-![User Dashboard](assets/screenshots/user-dasboard.jpg)
+![User Dashboard](assets/screenshots/user-dashboard.jpg)
 
 ### Seller Dashboard
 
-![Seller Dashboard](assets/screenshots/seller.jpg)
+![Seller Dashboard](assets/screenshots/seller-dashboard.jpg)
 
-### Seller Dashboard View 1
+### Seller Inventory View
 
-![Seller Dashboard View 1](assets/screenshots/seller1.jpg)
+![Seller Inventory View](assets/screenshots/seller-dashboard-1-.jpg)
 
-### Seller Dashboard View 2
+### Seller Product Management
 
-![Seller Dashboard View 2](assets/screenshots/seller2.jpg)
+![Seller Product Management](assets/screenshots/seller-dashboard-2-.jpg)
 
-### Seller Approval Pending
+### Seller Analytics
 
-![Seller Approval Pending](assets/screenshots/seller%20approval%20pending.jpg)
+![Seller Analytics](assets/screenshots/seller-analytics.jpg)
 
 ### Admin Dashboard
 
-![Admin Dashboard](assets/screenshots/admin%20dashboard.jpg)
+![Admin Dashboard](assets/screenshots/admin1.jpg)
 
-### Admin View 1
+### Admin Marketplace Overview
 
-![Admin View 1](assets/screenshots/admin-1.jpg)
+![Admin Marketplace Overview](assets/screenshots/admin2.jpg)
 
-### Admin View 2
+### Admin Business Control
 
-![Admin View 2](assets/screenshots/admin-2.jpg)
+![Admin Business Control](assets/screenshots/admin3.jpg)
 
-### Admin View 3
+### Admin Recent Orders and Products
 
-![Admin View 3](assets/screenshots/admin-3.jpg)
+![Admin Recent Orders and Products](assets/screenshots/admin4.jpg)
 
-### Admin View 4
+### Admin Additional Dashboard View
 
-![Admin View 4](assets/screenshots/admin-4.jpg)
+![Admin Additional Dashboard View](assets/screenshots/admin5.jpg)
 
-### Admin Approved Seller
+### Admin Order Management
 
-![Admin Approved Seller](assets/screenshots/admin-aproved-seller.jpg)
+![Admin Order Management](assets/screenshots/admin-manage-order.jpg)
 
-### Admin Approving Seller
+### Admin User Management
 
-![Admin Approving Seller](assets/screenshots/admin-aproving-seller.jpg)
+![Admin User Management](assets/screenshots/admin-manage-user.jpg)
 
-### Admin Approving Pending Seller
+### Admin User Management View 2
 
-![Admin Approving Pending Seller](assets/screenshots/admin-%20aproving-pending-seller.jpg)
+![Admin User Management View 2](assets/screenshots/admin-manage-user-1.jpg)
 
 ### Footer
 
@@ -108,11 +140,11 @@ EliteShop is designed with three main user roles:
 * Seller
 * Admin
 
-Customers can browse products, add items to cart, manage wishlist, place orders, and track order status.
+Customers can browse products, view product details, add items to cart, manage wishlist, enter shipping information, choose payment method, place orders, and use Razorpay for online payment.
 
-Sellers can register, wait for admin approval, add products, upload product images, manage their products, and view seller-related orders.
+Sellers can register, wait for admin approval, access a dedicated seller dashboard, add products, manage inventory, track product performance, and view seller analytics.
 
-Admins can manage users, sellers, products, approvals, orders, and platform activities from a dedicated admin dashboard.
+Admins can manage the entire marketplace including users, sellers, products, orders, inventory health, seller approvals, and business performance from a dedicated admin dashboard.
 
 ---
 
@@ -121,63 +153,73 @@ Admins can manage users, sellers, products, approvals, orders, and platform acti
 ### Customer Features
 
 * Customer registration and login
+* JWT-based authentication
 * Product browsing by category
 * Product details page
-* Add to cart
+* Product search support
 * Wishlist management
+* Shopping cart
+* Quantity update in cart
+* Coupon input UI
 * Shipping address flow
-* Checkout process
+* Payment method selection
+* Razorpay payment integration
+* Cash on delivery option
 * Order placement
-* Razorpay payment flow
-* My Orders page
-* Order details and tracking
+* Order summary
+* Customer dashboard
 
 ### Seller Features
 
 * Seller registration
-* Seller login
-* Seller pending approval page
+* Seller approval pending page
 * Seller dashboard
 * Add product
 * Edit product
 * Delete product
-* Upload product images
-* View seller analytics
-* Manage seller products
+* Product image upload
+* Product inventory management
+* Low stock monitoring
+* Seller analytics
+* Product performance signals
+* Seller quick actions
 
 ### Admin Features
 
 * Admin dashboard
 * User management
 * Seller management
-* Seller approval and rejection
+* Seller approval workflow
 * Product management
 * Order management
-* Low stock monitoring
-* Role-based access control
-* Protected admin routes
+* Inventory health monitoring
+* Low stock tracking
+* Featured product tracking
+* Revenue and order overview
+* Marketplace business control
+* Role-based route protection
 
 ### Product and Image Features
 
-* Product categories
-* Product details
-* Product cards
-* Product filtering and sorting
+* Category-based product sections
+* Product cards with image, price, rating, discount, and stock
+* Featured product badges
+* Product filtering and sorting support
 * Product image upload
 * Cloudinary image storage
-* Product image seeding from local folders
-* Automatic product image update script
+* Product image seeding support
 
 ### Order and Payment Features
 
 * Cart management
-* Checkout steps
-* Shipping details
-* Order placement
-* Razorpay integration
-* Order status update
+* Checkout workflow
+* Shipping details form
+* Delivery mode selection
+* Payment method selection
+* Razorpay payment gateway
+* Cash on delivery option
+* Order status tracking
 * Admin order management
-* Seller order workflow
 
 ---
 
@@ -185,10 +227,11 @@ Admins can manage users, sellers, products, approvals, orders, and platform acti
 
 ### Frontend
 
-* React
+* React.js
 * Vite
 * React Router DOM
 * React Bootstrap
+* Bootstrap
 * CSS
 * Axios
 * Framer Motion
@@ -229,27 +272,34 @@ Admins can manage users, sellers, products, approvals, orders, and platform acti
 ## Folder Structure
 
 ```txt
-ecomerse
+eliteshop
 ├── assets
 │   └── screenshots
-│       ├── admin dashboard.jpg
-│       ├── admin- aproving-pending-seller.jpg
-│       ├── admin-1.jpg
-│       ├── admin-2.jpg
-│       ├── admin-3.jpg
-│       ├── admin-4.jpg
-│       ├── admin-aproved-seller.jpg
-│       ├── admin-aproving-seller.jpg
-│       ├── cart-page-1.jpg
-│       ├── cart-page-2.jpg
+│       ├── admin-homepage.jpg
+│       ├── admin-manage-order.jpg
+│       ├── admin-manage-product-1.jpg
+│       ├── admin-manage-product.jpg
+│       ├── admin-manage-user-1.jpg
+│       ├── admin-manage-user.jpg
+│       ├── admin1.jpg
+│       ├── admin2.jpg
+│       ├── admin3.jpg
+│       ├── admin4.jpg
+│       ├── admin5.jpg
 │       ├── footer.jpg
-│       ├── home.jpg
-│       ├── product.jpg
-│       ├── seller approval pending.jpg
-│       ├── seller.jpg
-│       ├── seller1.jpg
-│       ├── seller2.jpg
-│       └── user-dasboard.jpg
+│       ├── seller-analytics.jpg
+│       ├── seller-dashboard-1-.jpg
+│       ├── seller-dashboard-2-.jpg
+│       ├── seller-dashboard.jpg
+│       ├── user-cart-1.jpg
+│       ├── user-cartpage.jpg
+│       ├── user-dashboard.jpg
+│       ├── user-ordering page 1.jpg
+│       ├── user-ordering page 2.jpg
+│       ├── user-ordering page.jpg
+│       ├── user-payement-page.jpg
+│       ├── user-payement-page1.jpg
+│       └── user-razorpay.jpg
 │
 ├── backend
 │   ├── config
@@ -299,10 +349,15 @@ ecomerse
 │   └── server.js
 │
 ├── frontend
+│   ├── public
+│   │
 │   ├── src
 │   │   ├── components
 │   │   ├── context
 │   │   ├── pages
+│   │   │   ├── admin
+│   │   │   ├── seller
+│   │   │   └── user
 │   │   ├── styles
 │   │   ├── utils
 │   │   ├── App.jsx
@@ -313,6 +368,7 @@ ecomerse
 │   └── vite.config.js
 │
 ├── .gitignore
+├── package.json
 └── README.md
 ```
 
@@ -343,7 +399,7 @@ VITE_API_URL=http://localhost:5000/api
 VITE_RAZORPAY_KEY_ID=your_razorpay_key_id
 ```
 
-Important: real `.env` files are ignored using `.gitignore` and should not be pushed to GitHub.
+Important: Real `.env` files are ignored using `.gitignore` and should not be pushed to GitHub.
 
 ---
 
@@ -372,6 +428,8 @@ http://localhost:5000
 
 ### 3. Frontend Setup
 
+Open a new terminal:
+
 ```bash
 cd frontend
 npm install
@@ -393,12 +451,6 @@ To insert sample users and products:
 ```bash
 cd backend
 node seeder.js
-```
-
-To insert only products:
-
-```bash
-node seeder.js --products
 ```
 
 To delete seeded data:
@@ -444,14 +496,15 @@ backend/seed-images/categories
 ### Customer Workflow
 
 ```txt
-Register/Login
+Register / Login
 → Browse Products
 → View Product Details
 → Add to Cart
 → Add to Wishlist
-→ Checkout
+→ Enter Shipping Details
+→ Choose Payment Method
 → Place Order
-→ Pay Using Razorpay
+→ Pay Using Razorpay / Cash On Delivery
 → Track Order
 ```
 
@@ -461,37 +514,40 @@ Register/Login
 Seller Register
 → Wait for Admin Approval
 → Login as Seller
+→ Access Seller Dashboard
 → Add Product
 → Upload Product Image
 → Manage Products
-→ View Orders
+→ Monitor Inventory
+→ View Seller Analytics
 ```
 
 ### Admin Workflow
 
 ```txt
 Admin Login
-→ View Dashboard
+→ View Admin Dashboard
 → Manage Users
 → Manage Sellers
-→ Approve/Reject Sellers
+→ Approve Sellers
 → Manage Products
 → Manage Orders
-→ Update Order Status
+→ Monitor Inventory Health
+→ Track Marketplace Activity
 ```
 
 ---
 
 ## API Modules
 
-The backend is divided into clear API modules:
+The backend is organized into clear API modules:
 
 * User authentication and profile APIs
 * Product APIs
 * Cart APIs
 * Order APIs
 * Upload APIs
-* Seller-related APIs
+* Seller workflow APIs
 * Admin management APIs
 
 ---
@@ -499,27 +555,29 @@ The backend is divided into clear API modules:
 ## Security Features
 
 * JWT-based authentication
+* Password hashing using bcrypt.js
 * Protected routes
 * Role-based access control
-* Password hashing with bcrypt.js
-* Environment variables for secrets
-* Secure backend configuration
-* Admin-only and seller-only route protection
+* Admin-only route protection
+* Seller-only route protection
+* Environment variables for secret keys
 * Sensitive files ignored using `.gitignore`
 
 ---
 
 ## Project Highlights
 
-* Built complete MERN ecommerce workflow
-* Implemented customer, seller, and admin role system
-* Added Cloudinary product image upload and management
+* Built a complete MERN ecommerce marketplace workflow
+* Implemented customer, seller, and admin role systems
+* Created category-based product browsing experience
+* Added cart, wishlist, checkout, and order workflow
 * Integrated Razorpay payment gateway
-* Created MongoDB models for users, products, carts, and orders
-* Built protected frontend routes
-* Added responsive UI using React Bootstrap and custom CSS
+* Added Cloudinary image upload support
+* Created seller approval and seller dashboard workflow
+* Built admin dashboard for marketplace control
+* Added inventory monitoring and product management
+* Designed responsive UI using React Bootstrap and custom CSS
 * Created product seeding and image upload automation scripts
-* Designed dashboards for admin and seller workflows
 
 ---
 
@@ -528,33 +586,35 @@ The backend is divided into clear API modules:
 * Full-stack MERN application development
 * REST API development using Express.js
 * MongoDB schema design with Mongoose
-* Authentication and authorization using JWT
-* Role-based routing in React
-* Context API for cart, wishlist, and auth state
+* JWT authentication and role-based authorization
+* React routing and protected routes
+* State management using Context API
+* Cart, wishlist, and checkout workflow design
 * Cloudinary image upload integration
-* Razorpay payment integration
-* Admin and seller dashboard workflows
-* GitHub project organization and deployment preparation
+* Razorpay payment gateway integration
+* Admin and seller dashboard development
+* GitHub project organization and documentation
 
 ---
 
 ## Future Improvements
 
+* Deploy frontend and backend
+* Add live demo link
 * Add email notifications
 * Add invoice PDF generation
 * Add advanced seller analytics
 * Add coupon management
 * Add product review image uploads
 * Add search suggestions
-* Add recommendation system
-* Add custom domain after deployment
+* Add product recommendation system
 * Improve SEO and performance optimization
 
 ---
 
 ## Author
 
-Abhijith Kumar p a
+**Abhijith Kumar P A**
 MERN Stack Developer
 
 GitHub: [abhijithak04](https://github.com/abhijithak04)
